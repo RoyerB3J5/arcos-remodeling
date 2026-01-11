@@ -1,0 +1,84 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  /** Texto del botón. Si no se pasa, se renderiza el slot */
+  text?: string;
+  /** Si se pasa, el componente renderiza un enlace `<a>` en lugar de `<button>` */
+  href?: string;
+  /** target para el enlace (ej. `_blank`) */
+  target?: string;
+  /** rel para el enlace; por defecto se aplica `noopener noreferrer` cuando target === '_blank' */
+  rel?: string;
+  /** Clase base para el botón (layout, paddings, rounded, etc) */
+  baseBtnClass?: string;
+  /** Clases adicionales que el usuario quiera aplicar (border, bg color, etc) */
+  extraBtnClass?: string;
+  /** Clase base para el texto */
+  baseTextClass?: string;
+  iconName?: string;
+  /** Clases adicionales para el texto (color, uppercase, size) */
+  textClass?: string;
+  baseIconClass?: string;
+  /** Clases para el icono (sólo color/tamaño si lo deseas) */
+  iconClass?: string;
+  iconCircleClass?: string;
+  iconCircle?: string;
+  /** Si se pasa (ms), aplica un 'shake' periódico al botón cada x milisegundos */
+  shakeInterval?: number;
+  /** Duración del shake en ms */
+  shakeDuration?: number;
+}
+
+const {
+  text = '',
+  baseBtnClass = 'flex justify-center items-center py-4 cursor-pointer gap-6 hover:-translate-y-[2px] transition-all duration-300 ease-in-out z-[10] px-6 hover:scale-[1.02] ',
+  extraBtnClass = '',
+  baseTextClass = 'font-medium leading-[120%] text-[16px]',
+  textClass = '',
+  baseIconClass = 'h-[14px] w-[14px]',
+  iconClass = '',
+  iconName,
+  href,
+  target,
+  rel,
+} = Astro.props as Props;
+
+// Normalizar hrefs comunes: si por error tiene una barra inicial antes
+// de un esquema `tel:` o `mailto:` la removemos para evitar rutas internas
+const normalizedHref =
+  typeof href === 'string' && /^\/(tel:|mailto:)/.test(href)
+    ? href.replace(/^\/+/, '')
+    : href;
+
+// No id necesario: usamos atributos data- para el script cliente
+
+// Construir clases finales
+const buttonClasses = `${baseBtnClass} ${extraBtnClass}`.trim();
+const paragraphClasses = `${baseTextClass} ${textClass}`.trim();
+const iconClasses = `${baseIconClass} ${iconClass}`.trim();
+---
+
+{
+  href ? (
+    <a
+      href={normalizedHref}
+      class={buttonClasses}
+      target={target}
+      rel={rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined)}
+    >
+      {text ? <p class={paragraphClasses}>{text}</p> : <slot />}
+      <Icon name={iconName} class={iconClasses} />
+    </a>
+  ) : (
+    <button
+      type="button"
+      class={buttonClasses}
+    >
+      {text ? <p class={paragraphClasses}>{text}</p> : <slot />}
+      <Icon name={iconName} class={iconClasses} />
+    </button>
+  )
+}
+
+

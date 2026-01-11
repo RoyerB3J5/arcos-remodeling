@@ -1,0 +1,25 @@
+---
+import en from '../../i18n/en';
+import es from '../../i18n/es';
+import Layout from '../../layouts/Layout.astro';
+import Benefits from '../../sections/main/Benefits.astro';
+import Hero from '../../sections/main/Hero.astro';
+import Services from '../../sections/main/Services.astro';
+import Why from '../../sections/main/Why.astro';
+import type { Language } from '../../types/language.type';
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+export const defaultRedirect = '/en';
+
+const lang = Astro.params.lang as Language;
+const translations = { es, en };
+const t = translations[lang];
+---
+<Layout lang={lang} t={t}>
+  <Hero content={t.main.hero} />
+  <Benefits content={t.main.benefits}/>
+  <Services content={t.main.services} />
+  <Why content={t.main.why} />
+</Layout>

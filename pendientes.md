@@ -1,0 +1,1 @@
+- Preguntar sobre la altura del hero como quieren que sea

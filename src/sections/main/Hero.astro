@@ -1,0 +1,135 @@
+---
+import Button from '../../components/Button.astro';
+type Translations = typeof import('../../i18n/es').default;
+type HeroContent = Translations['main']['hero'];
+interface Props {
+  content: HeroContent;
+}
+const { content } = Astro.props as Props;
+---
+
+{
+  /* <section class="flex justify-center items-center w-full h-screen max-h-225 overflow-hidden">
+  <div class="w-[50%] h-full bg-primary"></div>
+  <div class="relative overflow-hidden w-[50%] h-auto aspect-720/900 max-h-225">
+    <img
+      src="/images/main.webp"
+      alt="Imagen de Arco Remodeling"
+      class="absolute inset-0 w-full h-full object-cover object-[50%_50%]"
+      width="720"
+      height="900"
+    />
+  </div>
+</section>*/
+}
+{
+  /*<section class="flex justify-center items-center w-full h-screen overflow-hidden">
+  <div class="flex-1 min-w-0 h-full bg-primary"></div>
+  <div class="relative overflow-hidden w-auto h-screen aspect-720/900 ">
+    <img
+      src="/images/main.webp"
+      alt="Imagen de Arco Remodeling"
+      class="absolute inset-0 w-full h-full object-cover "
+      width="720"
+      height="900"
+    />
+  </div>
+</section> */
+}
+{
+  /* <section class="flex justify-center items-center w-full h-screen  overflow-hidden">
+  <div class="w-[50%] h-full bg-primary"></div>
+  <div class="relative overflow-hidden w-[50%] h-full ">
+    <img
+      src="/images/main.webp"
+      alt="Imagen de Arco Remodeling"
+      class="absolute inset-0 w-full h-full object-cover object-bottom"
+      width="720"
+      height="900"
+    />
+  </div>
+</section> */
+}
+<section
+  class="flex flex-col sm:flex-row justify-center items-center w-full h-screen sm:h-auto aspect-auto sm:aspect-1440/900 max-h-screen overflow-hidden relative"
+>
+  <div
+    class="w-full sm:w-[50%] bg-primary order-2 sm:order-1 py-8 px-5 flex justify-center items-center flex-1 h-auto sm:h-full"
+  >
+    <div
+      class="flex sm:hidden flex-col justify-center items-start gap-8 w-full"
+    >
+      <div class="flex flex-col justify-center items-start gap-4 text-white">
+        <p
+          class="text-[16px] font-normal uppercase tracking-[2px] leading-[120%]"
+        >
+          {content.description}
+        </p>
+        <h1
+          set:html={content.title}
+          class="text-[32px] font-extrabold leading-[125%] font-title"
+        />
+      </div>
+      <div class="flex justify-start items-center gap-4">
+        {
+          content.buttons.map((item) => (
+            <Button
+              text={item.label}
+              textClass="text-primary"
+              href={item.href}
+              extraBtnClass={`${item.color} animate-shake`}
+              iconName={item.icon}
+              iconClass="text-primary"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div
+    class="relative overflow-hidden w-full sm:w-[50%] aspect-720/900 sm:h-full order-1 sm:order-2"
+  >
+    <img
+      src="/images/main.webp"
+      alt="Imagen de Arco Remodeling"
+      class="w-full h-full object-cover sm:object-fill"
+      width="720"
+      height="900"
+      decoding="async"
+      loading="eager"
+    />
+  </div>
+  <div
+    class="w-full max-w-screen md:max-w-7xl sm:flex justify-start items-center px-5 xl:px-0 absolute hidden"
+  >
+    <div
+      class="flex flex-col justify-center items-start gap-8 xl:gap-16 max-w-1/2 translate-y-8 lg:translate-y-0"
+    >
+      <div class="flex flex-col justify-center items-start gap-8 text-white">
+        <p
+          class="text-[18px] md:text-[24px] font-normal leading-[100%] uppercase tracking-[2px]"
+        >
+          {content.description}
+        </p>
+        <h1
+          set:html={content.title}
+          class="text-[24px] md:text-[36px] lg:text-[48px] font-extrabold leading-[116%] font-title"
+        />
+      </div>
+      <div class="flex justify-start items-center gap-4">
+        {
+          content.buttons.map((item) => (
+            <Button
+              text={item.label}
+              textClass="text-primary"
+              href={item.href}
+              extraBtnClass={`${item.color} animate-shake`}
+              iconName={item.icon}
+              iconClass="text-primary"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

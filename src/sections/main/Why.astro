@@ -1,0 +1,67 @@
+---
+type Translations = typeof import('../../i18n/es').default;
+type WhyContent = Translations['main']['why'];
+interface Props {
+  content: WhyContent;
+}
+const { content } = Astro.props as Props;
+const currentPath = Astro.url.pathname;
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
+---
+
+<section
+  class="w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center items-center px-5 xl:px-0 pt-14 md:pt-30 gap-10 md:gap-6"
+>
+  <div
+    class="w-full md:w-[50%] min-w-0 flex flex-col justify-center items-start gap-10 md:gap-16"
+  >
+    <div class="flex flex-col justify-center items-start gap-6">
+      <h2
+        class="text-[32px] md:text-[48px] font-bold leading-[125%] md:leading-[117%] font-title text-primary"
+        set:html={content.title}
+      />
+      <p class="text-[16px] text-paragraph leading-[150%] font-normal">
+        {content.description}
+      </p>
+    </div>
+    <div class="flex flex-col justify-center items-center gap-10 md:gap-12">
+      {
+        content.items.map((item, index) => (
+          <>
+            <div class="flex justify-start items-center gap-6 w-full">
+              <div class="w-17.75 h-17.75 flex justify-center items-center bg-secondary">
+                <img
+                  src={`/images/${item.icon}.svg`}
+                  alt={item.title}
+                  width="34"
+                  height="34"
+                  class="w-8.5 h-8.5"
+                />
+              </div>
+              <div class="flex flex-col justify-center items-start gap-2.75 flex-1 min-w-0">
+                <h3 class="text-[24px] font-semibold text-primary leading-[120%]">
+                  {item.title}
+                </h3>
+                <p class="text-[16px] text-paragraph leading-[150%] font-normal">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+            <div
+              class={`${index === 1 ? 'hidden' : ''} w-full bg-black/10 h-px`}
+            />
+          </>
+        ))
+      }
+    </div>
+  </div>
+  <img
+    src="/images/why.webp"
+    alt="Imagen de Porque Arco Remodeling"
+    width="750"
+    height="814"
+    class="w-full md:w-[50%] h-auto min-w-0 object-cover"
+  />
+</section>

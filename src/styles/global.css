@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Komet';
+  src: url('/fonts/Komet_Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Komet';
+  src: url('/fonts/Komet_Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Komet';
+  src: url('/fonts/Komet_SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Komet';
+  src: url('/fonts/Komet_Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Komet';
+  src: url('/fonts/Komet_Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+@theme {
+  --font-family: 'Inter', 'NeueMontreal', sans-serif;
+  --font-title: 'Komet', 'NeueMontreal', sans-serif;
+  --color-primary: #103350;
+  --color-primary-2: #002E4F;
+  --color-secondary: #BEC01B;
+  --color-secondary-2:#BFC100;
+  --color-back: #F4F6F2;
+  --color-back-2: #3E6C8A;
+  --color-paragraph: #2C2C2C;
+  --breakpoint-xs: 400px;
+  --breakpoint-4xl: 1750px;
+  --breakpoint-3xl: 2000px;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-3px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.animate-shake {
+  animation: shake 2s ease-in-out infinite;
+}
