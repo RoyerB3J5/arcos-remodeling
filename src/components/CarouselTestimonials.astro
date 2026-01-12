@@ -1,0 +1,511 @@
+---
+interface Props {
+  interval?: number;
+}
+
+const { interval = 8000 } = Astro.props as Props;
+---
+
+<div
+  class="relative px-0 w-full hero-carousel flex flex-col justify-center items-start gap-14 md:gap-8"
+  data-interval={interval}
+>
+  <!-- Viewport -->
+  <div class="overflow-hidden w-full h-full">
+    <div
+      class="flex transition-transform duration-800 ease-in-out review-track hero-carousel-track h-full"
+      id="carousel-track"
+    >
+      {
+        Array.from({ length: 4 }, (_, i) => (
+          <div class="shrink-0 w-full md:w-[70%] h-full px-0 md:px-5">
+            <img
+              src={`/images/testimonial-1.webp`}
+              alt="Slide image"
+              width="520"
+              height="240"
+              class="w-full h-full object-cover hidden sm:block "
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={`/images/testimonial-sm-1.webp`}
+              alt="Slide image"
+              width="325"
+              height="342"
+              class="w-full h-full object-cover sm:hidden sblock "
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <!-- Controles con barra de progreso y botones -->
+  <div
+    class="w-full flex justify-start items-center gap-6 pl-5 max-w-156.5 pr-5 xl:pr-0"
+  >
+    <div class="w-full md:w-[80%] flex items-center gap-4">
+      <div
+        class="flex-1 bg-[#E8E8E8] md:bg-white/50 rounded-full h-1.25 md:h-1 backdrop-blur-sm"
+      >
+        <div
+          class="hero-carousel-progress bg-secondary md:bg-secondary h-1.25 md:h-1 rounded-full transition-all duration-500 ease-out"
+          style="width: 0%"
+        >
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón anterior -->
+    <div class="flex justify-center items-center gap-6">
+      <button
+        class="hero-carousel-prev border border-white hover:border-secondary text-white py-3 px-3 transition-all duration-200 cursor-pointer hover:bg-secondary hover:text-primary"
+        aria-label="Previous slide"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      <!-- Botón siguiente -->
+      <button
+        class="hero-carousel-next border border-white hover:border-secondary text-white py-3 px-3 transition-all duration-200 cursor-pointer hover:bg-secondary hover:text-primary"
+        aria-label="Next slide"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-carousel-progress {
+    /* default: use brand brown on small screens */
+    background: #bec01b !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) !important;
+  }
+  @media (min-width: 768px) {
+    .hero-carousel-progress {
+      /* desktop: white progress as before */
+      background: linear-gradient(90deg, #bec01b 0%, #bec01b 100%) !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    if (typeof window === 'undefined') return;
+
+    // Función simple para generar un hash (para IDs únicos)
+    String.prototype.hashCode = function () {
+      let hash = 0;
+      for (let i = 0; i < this.length; i++) {
+        const char = this.charCodeAt(i);
+        hash = (hash << 10) - hash + char;
+        hash = hash & hash;
+      }
+      return Math.abs(hash);
+    };
+
+    const debounce = (fn, ms = 100) => {
+      let t;
+      return (...a) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(this, a), ms);
+      };
+    };
+
+    function initCarousel(carousel) {
+      if (!carousel || carousel.dataset.inited) return;
+      carousel.dataset.inited = '1';
+
+      const track = carousel.querySelector('.hero-carousel-track');
+      const prevBtn = carousel.querySelector('.hero-carousel-prev');
+      const nextBtn = carousel.querySelector('.hero-carousel-next');
+      const progressBar = carousel.querySelector('.hero-carousel-progress');
+      const counter = carousel.querySelector('.hero-carousel-counter');
+      const total = carousel.querySelector('.hero-carousel-total');
+
+      const intervalMs =
+        parseInt(carousel.getAttribute('data-interval') || '0', 10) || 5000;
+
+      let slides = Array.from(track.children);
+      const totalSlides = slides.length;
+
+      // Actualizar el contador total
+      if (total && totalSlides > 0) {
+        total.textContent = totalSlides.toString();
+      }
+
+      const waitForImages = async (nodes, opts = {}) => {
+        const timeout = typeof opts.timeout === 'number' ? opts.timeout : 400;
+        const imgs = Array.from(nodes || []).flatMap((n) =>
+          Array.from(n.querySelectorAll ? n.querySelectorAll('img') : [])
+        );
+        await Promise.all(
+          imgs.map(
+            (img) =>
+              new Promise((resolve) => {
+                if (img.complete) return resolve();
+                let done = false;
+                const onDone = () => {
+                  if (done) return;
+                  done = true;
+                  cleanup();
+                  resolve();
+                };
+                const cleanup = () => {
+                  img.removeEventListener('load', onDone);
+                  img.removeEventListener('error', onDone);
+                };
+                img.addEventListener('load', onDone, { once: true });
+                img.addEventListener('error', onDone, { once: true });
+                // fallback timeout so we never wait forever (lazy images, blocked loading, etc.)
+                setTimeout(onDone, timeout);
+              })
+          )
+        );
+      };
+
+      const setup = async () => {
+        // helper to detect items per view
+        function getItemsPerView() {
+          // Determine items per view by measuring container and first slide width.
+          const containerW =
+            track.getBoundingClientRect().width || window.innerWidth;
+          const first = slides[0];
+          if (!first) return 1;
+          const slideW = first.getBoundingClientRect().width || containerW;
+          const approx = Math.max(1, Math.round(containerW / slideW));
+          return approx;
+        }
+
+        // clear any previous auto interval stored on the carousel (when re-running setup)
+        if (carousel._heroAuto) {
+          clearInterval(carousel._heroAuto);
+          carousel._heroAuto = null;
+        }
+        // remove any existing clones
+        Array.from(track.querySelectorAll('.clone')).forEach((n) => n.remove());
+
+        // recompute responsive values after images/styles are applied
+        // wait for images of the originals to load to get correct measurements
+        const originalsBefore = Array.from(track.children).filter(
+          (n) => !n.classList.contains('clone')
+        );
+        await waitForImages(originalsBefore);
+
+        // recompute responsive values
+        let itemsPerView = getItemsPerView();
+        let step = itemsPerView >= 9 ? 2 : itemsPerView;
+        // Keep originals (non-clone)
+        const originals = Array.from(track.children).filter(
+          (n) => !n.classList.contains('clone')
+        );
+
+        // If there is only one original slide, nothing to clone
+        if (originals.length <= 1) {
+          slides = Array.from(track.children);
+        } else {
+          const cloneCount = itemsPerView;
+
+          // prepend clones of the last `cloneCount` originals
+          for (
+            let i = Math.max(0, originals.length - cloneCount);
+            i < originals.length;
+            i++
+          ) {
+            const c = originals[i].cloneNode(true);
+            c.classList.add('clone');
+            track.insertBefore(c, track.firstChild);
+          }
+
+          // append clones of the first `cloneCount` originals
+          for (let i = 0; i < Math.min(cloneCount, originals.length); i++) {
+            const c = originals[i].cloneNode(true);
+            c.classList.add('clone');
+            track.appendChild(c);
+          }
+
+          slides = Array.from(track.children);
+        }
+
+        let currentIndex = itemsPerView; // start at first real slide after prepended clones
+        let isTransitioning = false;
+        let autoSlide;
+
+        // itemsPerView and step are declared above and updated in updateProgress when needed
+
+        function getSlideWidth() {
+          return slides[0].getBoundingClientRect().width;
+        }
+
+        function updateProgress() {
+          if (slides.length <= 1) return;
+
+          // realSlideCount is the number of original slides (without clones)
+          const realSlideCount = Array.from(track.children).filter(
+            (n) => !n.classList.contains('clone')
+          ).length;
+
+          // Recompute itemsPerView and step in case of resize
+          itemsPerView = getItemsPerView();
+          step = itemsPerView >= 9 ? 2 : itemsPerView;
+
+          // Compute realIndex (0-based in originals)
+          const cloneCount = itemsPerView;
+          let realIndex =
+            (currentIndex - cloneCount + realSlideCount) % realSlideCount;
+
+          // Use exact slide index for progress so the bar updates per slide (1..N)
+          const progressPercentage = ((realIndex + 1) / realSlideCount) * 100;
+
+          if (progressBar) {
+            progressBar.style.width = `${progressPercentage}%`;
+          }
+
+          if (counter) {
+            counter.textContent = (realIndex + 1).toString();
+          }
+        }
+
+        function goTo(index, smooth = true) {
+          if (slides.length <= 1) return;
+
+          const maxIndex = slides.length - 1;
+          if (index < 0) index = 0;
+          if (index > maxIndex) index = maxIndex;
+
+          if (isTransitioning && smooth) return;
+          track.style.transition = smooth
+            ? 'transform 0.5s ease-in-out'
+            : 'none';
+          track.style.transform = `translateX(-${getSlideWidth() * index}px)`;
+          currentIndex = index;
+          isTransitioning = smooth;
+          updateProgress();
+        }
+
+        if (slides.length > 1) {
+          track.addEventListener('transitionend', () => {
+            const originalsCount = Array.from(track.children).filter(
+              (n) => !n.classList.contains('clone')
+            ).length;
+            const cloneCount = itemsPerView;
+
+            // if we've moved into the clones at the end, jump back to the equivalent original
+            if (currentIndex >= originalsCount + cloneCount) {
+              currentIndex = currentIndex - originalsCount;
+              track.style.transition = 'none';
+              track.style.transform = `translateX(-${getSlideWidth() * currentIndex}px)`;
+            }
+
+            // if we've moved into the clones at the start, jump forward to equivalent original
+            if (currentIndex < cloneCount) {
+              currentIndex = currentIndex + originalsCount;
+              track.style.transition = 'none';
+              track.style.transform = `translateX(-${getSlideWidth() * currentIndex}px)`;
+            }
+
+            isTransitioning = false;
+          });
+        }
+
+        prevBtn?.addEventListener('click', () => {
+          // move by one slide on button press
+          goTo(currentIndex - 1);
+          resetAuto();
+        });
+
+        nextBtn?.addEventListener('click', () => {
+          // move by one slide on button press
+          goTo(currentIndex + 1);
+          resetAuto();
+        });
+
+        function startAuto() {
+          if (slides.length > 1) {
+            // auto-advance by one slide each interval
+            carousel._heroAuto = setInterval(
+              () => goTo(currentIndex + 1),
+              intervalMs
+            );
+          }
+        }
+
+        function stopAuto() {
+          if (carousel._heroAuto) {
+            clearInterval(carousel._heroAuto);
+            carousel._heroAuto = null;
+          }
+        }
+
+        function resetAuto() {
+          stopAuto();
+          startAuto();
+        }
+
+        carousel.addEventListener('mouseenter', stopAuto, { passive: true });
+        carousel.addEventListener('mouseleave', startAuto, { passive: true });
+
+        // Touch support (improved): support drag-follow and threshold relative to slide width
+        let startX = 0,
+          deltaX = 0,
+          isTouchDragging = false;
+
+        function onTouchMove(e) {
+          if (!isTouchDragging) return;
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX || 0;
+          deltaX = clientX - startX;
+          const translate = -getSlideWidth() * currentIndex + deltaX;
+          track.style.transform = `translateX(${translate}px)`;
+        }
+
+        function onTouchEnd(e) {
+          if (!isTouchDragging) return;
+          isTouchDragging = false;
+          const clientX = e.changedTouches
+            ? e.changedTouches[0].clientX
+            : e.clientX || 0;
+          deltaX = clientX - startX;
+          const threshold = Math.max(50, getSlideWidth() * 0.18); // relative threshold
+          if (Math.abs(deltaX) > threshold) {
+            const dir = deltaX < 0 ? 1 : -1;
+            goTo(currentIndex + dir);
+          } else {
+            goTo(currentIndex, true);
+          }
+          resetAuto();
+          window.removeEventListener('touchmove', onTouchMove);
+          window.removeEventListener('touchend', onTouchEnd);
+        }
+
+        track.addEventListener(
+          'touchstart',
+          (e) => {
+            startX = e.touches[0].clientX;
+            deltaX = 0;
+            isTouchDragging = true;
+            stopAuto();
+            track.style.transition = 'none';
+            window.addEventListener('touchmove', onTouchMove, {
+              passive: true,
+            });
+            window.addEventListener('touchend', onTouchEnd, { passive: true });
+          },
+          { passive: true }
+        );
+
+        // Mouse drag support
+        let isDragging = false;
+        let dragStartX = 0;
+        let dragDelta = 0;
+
+        function onMouseMove(e) {
+          if (!isDragging) return;
+          dragDelta = e.clientX - dragStartX;
+          const translate = -getSlideWidth() * currentIndex + dragDelta;
+          track.style.transform = `translateX(${translate}px)`;
+        }
+
+        function onMouseUp() {
+          if (!isDragging) return;
+          isDragging = false;
+          window.removeEventListener('mousemove', onMouseMove);
+          window.removeEventListener('mouseup', onMouseUp);
+          if (Math.abs(dragDelta) > 50) {
+            const dir = dragDelta < 0 ? 1 : -1;
+            // move one slide per drag
+            goTo(currentIndex + dir);
+          } else {
+            goTo(currentIndex, true);
+          }
+          dragDelta = 0;
+          resetAuto();
+        }
+
+        track.addEventListener('mousedown', (e) => {
+          if (e.button !== 0) return;
+          isDragging = true;
+          dragStartX = e.clientX;
+          dragDelta = 0;
+          stopAuto();
+          track.style.transition = 'none';
+          window.addEventListener('mousemove', onMouseMove);
+          window.addEventListener('mouseup', onMouseUp);
+          e.preventDefault();
+        });
+
+        function init() {
+          slides = Array.from(track.children);
+          // Force a non-animated positioning to the intended starting slide
+          if (slides.length > 1) {
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${Math.round(
+              getSlideWidth() * currentIndex
+            )}px)`;
+          }
+          // small rAF to ensure layout settled before enabling transitions
+          requestAnimationFrame(() => updateProgress());
+        }
+
+        // On resize re-run setup to rebuild clones for the new itemsPerView
+        window.addEventListener(
+          'resize',
+          debounce(() => setup(), 120)
+        );
+
+        init();
+        startAuto();
+      };
+
+      if ('requestIdleCallback' in window)
+        requestIdleCallback(setup, { timeout: 1500 });
+      else setTimeout(setup, 600);
+    }
+
+    const carousels = Array.from(
+      document.querySelectorAll('.hero-carousel[data-interval]')
+    );
+    if (carousels.length === 0) return;
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              initCarousel(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { root: null, rootMargin: '400px' }
+      );
+      carousels.forEach((c) => io.observe(c));
+    } else {
+      carousels.forEach((c) => initCarousel(c));
+    }
+  })();
+</script>

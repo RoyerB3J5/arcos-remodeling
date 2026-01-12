@@ -3,8 +3,12 @@ import en from '../../i18n/en';
 import es from '../../i18n/es';
 import Layout from '../../layouts/Layout.astro';
 import Benefits from '../../sections/main/Benefits.astro';
+import Gallery from '../../sections/main/Gallery.astro';
 import Hero from '../../sections/main/Hero.astro';
+import Improve from '../../sections/main/Improve.astro';
+import Process from '../../sections/main/Process.astro';
 import Services from '../../sections/main/Services.astro';
+import Testimonials from '../../sections/main/Testimonials.astro';
 import Why from '../../sections/main/Why.astro';
 import type { Language } from '../../types/language.type';
 export function getStaticPaths() {
@@ -17,9 +21,14 @@ const lang = Astro.params.lang as Language;
 const translations = { es, en };
 const t = translations[lang];
 ---
+
 <Layout lang={lang} t={t}>
   <Hero content={t.main.hero} />
-  <Benefits content={t.main.benefits}/>
+  <Benefits content={t.main.benefits} />
   <Services content={t.main.services} />
   <Why content={t.main.why} />
+  <Process content={t.main.process} />
+  <Improve content={t.main.improve} />
+  <Gallery content={t.main.gallery} />
+  <Testimonials content={t.main.testimonials} />
 </Layout>

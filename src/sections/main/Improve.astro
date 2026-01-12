@@ -1,0 +1,48 @@
+---
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type ImproveContent = Translations['main']['improve'];
+interface Props {
+  content: ImproveContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center items-stretch px-5 xl:px-0 pt-14 lg:pt-30"
+>
+  <img
+    src="/images/improve.webp"
+    alt=" Mejora Arco Remodeling"
+    width="750"
+    height="487"
+    class="w-full md:w-[50%] h-auto order-2 md:order-1"
+  />
+  <div
+    class="w-full md:w-[50%] self-stretch flex flex-col justify-center items-start px-4.5 xl:px-7 gap-6 md:gap-3 lg:gap-6 bg-back-2 order-1 md:order-2 py-8 md:py-0"
+  >
+    <h2
+      class="text-[32px] xl:text-[48px] leading-[117%] font-bold text-white font-title"
+    >
+      {content.title}
+    </h2>
+    <p class="text-[16px] leading-[150%] font-normal text-white">
+      {content.description}
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center items-start sm:items-center gap-6">
+      {
+        content.buttons.map((button) => (
+          <Button
+            text={button.label}
+            textClass="text-primary"
+            href={button.href}
+            extraBtnClass={`${button.color}`}
+            iconName={button.icon}
+            iconClass="text-primary"
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

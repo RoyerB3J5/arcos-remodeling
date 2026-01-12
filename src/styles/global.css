@@ -33,7 +33,7 @@
 }
 @theme {
   --font-family: 'Inter', 'NeueMontreal', sans-serif;
-  --font-title: 'Komet', 'NeueMontreal', sans-serif;
+  --font-title: 'Komet';
   --color-primary: #103350;
   --color-primary-2: #002E4F;
   --color-secondary: #BEC01B;

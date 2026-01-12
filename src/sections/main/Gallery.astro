@@ -1,0 +1,171 @@
+---
+type Translations = typeof import('../../i18n/es').default;
+type GalleryContent = Translations['main']['gallery'];
+interface Props {
+  content: GalleryContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="w-full max-w-screen flex flex-col  justify-center items-center py-14 lg:py-30 gap-12 md:gap-14"
+>
+  <div class="flex flex-col justify-center items-center md:items-center gap-6 max-w-193.75 px-9 md:px-0">
+    <h2
+      class="text-[32px] md:text-[48px] font-bold leading-[125%] md:leading-[117%] font-title text-primary text-start md:text-center"
+    >
+      {content.title}
+    </h2>
+    <p
+      set:html={content.description}
+      class="text-[16px] text-paragraph leading-[150%] font-normal text-start md:text-center"
+    />
+  </div>
+  <div class="w-full">
+    <style>
+      .carousel-track {
+        gap: 16px;
+        align-items: stretch;
+      }
+      /* default: each slide takes full width (1 per view) */
+      .carousel-slide {
+        flex: 0 0 100%;
+      }
+      .carousel {
+        overflow: hidden;
+      }
+
+      /* sm (>=640px and <768px): 2 slides per view */
+      @media (min-width: 640px) and (max-width: 767.98px) {
+        .carousel > .carousel-track:first-child .carousel-slide {
+          flex: 0 0 50%;
+        }
+      }
+
+      /* md and up (>=768px): 3 slides per view */
+      @media (min-width: 768px) {
+        .carousel > .carousel-track:first-child .carousel-slide {
+          flex: 0 0 33.3333%;
+        }
+      }
+    </style>
+
+    <div class="carousel overflow-hidden">
+      <!-- Track for md and below: each div is a separate slide -->
+      <div class="carousel-track flex">
+        <!-- group A -->
+        {
+          content.images.map((image, index) => (
+            <div class="carousel-slide w-full h-auto">
+              <img
+                src={`/images/${image}.webp`}
+                alt="Imagen de Carousel"
+                width="800"
+                height="984"
+                class="w-full h-auto"
+              />
+            </div>
+          ))
+        }
+        <!-- group B (duplicate) -->
+        {
+          content.images.map((image, index) => (
+            <div class="carousel-slide w-full h-auto">
+              <img
+                src={`/images/${image}.webp`}
+                alt="Imagen de Carousel"
+                width="800"
+                height="984"
+                class="w-full h-auto"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tracks = document.querySelectorAll('.carousel-track');
+        let track: HTMLElement | null = null;
+        for (const t of tracks) {
+          if (getComputedStyle(t).display !== 'none') {
+            track = t as HTMLElement;
+            break;
+          }
+        }
+        if (!track) return;
+        let slides = Array.from(
+          track.querySelectorAll<HTMLElement>('.carousel-slide')
+        );
+        if (slides.length < 2) return;
+
+        // Use Web Animations API for a seamless scroll based on actual slide width + gap
+        let anim: Animation | null = null;
+        const trackEl = track as HTMLElement;
+        const speedPxPerSec = 50; // px per second (scroll speed)
+
+        function getSlidesPerView() {
+          const w = window.innerWidth;
+          if (w >= 768) return 3; // md and up
+          if (w >= 640) return 2; // sm to md
+          return 1; // below sm
+        }
+
+        function startAnim() {
+          if (anim) anim.cancel();
+          const first = slides[0];
+          const slideRect = first.getBoundingClientRect();
+          const slideWidth = Math.round(slideRect.width);
+          if (!slideWidth) return;
+          const trackStyle = getComputedStyle(trackEl);
+          const gap = parseFloat(trackStyle.gap || '0') || 0;
+          const slidesPerView = getSlidesPerView();
+          let distance = (slideWidth + gap) * slidesPerView;
+          const duration = Math.max(3000, (distance / speedPxPerSec) * 1000);
+
+          anim = trackEl.animate(
+            [
+              { transform: 'translateX(0px)' },
+              { transform: `translateX(-${distance}px)` },
+            ],
+            {
+              duration,
+              iterations: Infinity,
+              easing: 'linear',
+            }
+          );
+
+          // pause on hover of the carousel container (bind only once)
+          const container = trackEl.closest('.carousel') as HTMLElement | null;
+          if (container && container.dataset.carouselHoverBound !== '1') {
+            container.addEventListener('mouseenter', () => anim?.pause());
+            container.addEventListener('mouseleave', () => anim?.play());
+            container.dataset.carouselHoverBound = '1';
+          }
+        }
+
+        startAnim();
+        window.addEventListener('resize', () => {
+          if (anim) anim.cancel();
+          // Re-select the visible track on resize
+          for (const t of tracks) {
+            if (getComputedStyle(t).display !== 'none') {
+              track = t as HTMLElement;
+              break;
+            }
+          }
+          if (track) {
+            const newSlides = Array.from(
+              track.querySelectorAll<HTMLElement>('.carousel-slide')
+            );
+            // update slides so startAnim uses current visible track
+            slides = newSlides;
+            if (newSlides.length >= 2) {
+              startAnim();
+            }
+          }
+        });
+      });
+    </script>
+  </div>
+</section>

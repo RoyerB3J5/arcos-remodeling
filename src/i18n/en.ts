@@ -153,6 +153,58 @@ export default {
         },
       ],
     },
+    process: {
+      title: 'A Simple and Professional Process',
+      description:
+        'In just 3 easy steps, we deliver quality painting and drywall services with clean and reliable results.',
+      steps: [
+        {
+          title: 'Easy Scheduling',
+          description:
+            'We discuss your project, answer your questions, and schedule your service at a time that works best for you.',
+        },
+        {
+          title: 'We Get to Work',
+          description:
+            'Our team arrives prepared and on time, completing the job with attention to detail, clean execution, and respect for your home.',
+        },
+        {
+          title: 'Quality Results',
+          description:
+            'We finish the project to your satisfaction, ensuring clean finishes, durable results, and a job done right the first time.',
+        },
+      ],
+    },
+    improve: {
+      title: 'Improve Your Home with Quality Craftsmanship',
+      description:
+        'Schedule your painting or drywall project with Arcos Remodeling Home Improvement and enjoy professional service, clean finishes, and reliable results you can trust across New Mexico.',
+      buttons: [
+        {
+          label: 'Book Now!',
+          href: '#',
+          icon: 'arrow',
+          color: 'bg-white',
+        },
+        {
+          label: 'Call Now',
+          href: '#',
+          icon: 'phone',
+          color: 'bg-secondary',
+        },
+      ],
+    },
+    gallery: {
+      title: 'Beautiful Homes. Quality Results.',
+      description:
+        'See our latest projects, real transformations, and finished work completed for homeowners across <br class="hidden sm:block"/> New Mexico. Every image reflects our commitment to quality craftsmanship, attention to detail, and <br class="hidden sm:block"/>  results done right the first time.',
+      images: ['gallery-1', 'gallery-2', 'gallery-3', 'gallery-4'],
+    },
+    testimonials: {
+      title: 'What Homeowners Say About Arcos Remodeling',
+      description:
+        'Backed by real customer experiences, Arcos Remodeling Home Improvement is trusted for quality workmanship, attention to detail, and reliable service across New Mexico.',
+    },
   },
 
   services: {},

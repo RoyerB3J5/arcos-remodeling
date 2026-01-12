@@ -153,6 +153,59 @@ export default {
         },
       ],
     },
+    process: {
+      title: 'Un proceso simple y profesional',
+      description:
+        'En solo 3 pasos sencillos ofrecemos servicios de pintura y drywall con resultados limpios y confiables.',
+      steps: [
+        {
+          title: 'Programación sencilla',
+          description:
+            'Hablamos de tu proyecto, respondemos tus preguntas y programamos el servicio en el mejor momento para ti.',
+        },
+        {
+          title: 'Manos a la obra',
+          description:
+            'Nuestro equipo llega preparado y puntual, realizando el trabajo con atención al detalle, ejecución limpia y respeto por tu hogar.',
+        },
+        {
+          title: 'Resultados de calidad',
+          description:
+            'Terminamos el proyecto a tu satisfacción, garantizando acabados limpios, resultados duraderos y un trabajo bien hecho a la primera.',
+        },
+      ],
+    },
+    improve: {
+      title: 'Mejora tu hogar con mano de obra de calidad',
+      description:
+        'Programa tu proyecto de pintura o drywall con Arcos Remodeling y disfruta de servicio profesional, acabados limpios y resultados confiables en todo Nuevo México.',
+      buttons: [
+        {
+          label: 'Reservar Ya!',
+          href: '#',
+          icon: 'arrow',
+          color: 'bg-white',
+        },
+        {
+          label: 'Llamar Ahora',
+          href: '#',
+          icon: 'phone',
+          color: 'bg-secondary',
+        },
+      ],
+    },
+    gallery: {
+      title: 'Hogares hermosos. Resultados de calidad.',
+      description:
+        'Mira nuestros últimos proyectos, transformaciones reales y trabajos terminados para propietarios en <br class="hidden sm:block"/> Nuevo México. Cada imagen refleja nuestro compromiso con la mano de obra de calidad, la atención al detalle y <br class="hidden sm:block"/> resultados bien hechos a la primera.',
+      images: ['gallery-1', 'gallery-2', 'gallery-3', 'gallery-4'],
+    },
+    testimonials: {
+      title: 'Lo que dicen los propietarios sobre Arcos Remodeling',
+      description:
+        'Respaldado por experiencias reales de clientes, Arcos Remodeling es confiable por su mano de obra de calidad, atención al detalle y servicio responsable en todo Nuevo México.',
+
+    },
   },
   services: {},
   footer: {},

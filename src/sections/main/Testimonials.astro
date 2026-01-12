@@ -1,0 +1,37 @@
+---
+import CarouselTestimonials from '../../components/CarouselTestimonials.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type TestimonialsContent = Translations['main']['testimonials'];
+interface Props {
+  content: TestimonialsContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section class="w-full h-auto flex justify-center items-end bg-primary gap-2 px-5 md:px-0">
+  <img
+    src="/images/testimonials.webp"
+    alt="Testimonios de Arco Remodeling"
+    width="1188"
+    height="1080"
+    class="self-end w-[50%] h-auto hidden md:block"
+    decoding="async"
+    loading="lazy"
+  />
+  <div
+    class="w-full sm:w-[70%] md:w-[50%] self-stretch flex flex-col justify-center items-start gap-14 md:gap-8 lg:gap-14 py-8 md:py-3 lg:py-0"
+  >
+    <div
+      class="flex flex-col justify-center items-start gap-6 max-w-138.5 pl-5"
+    >
+      <h2 class="font-title text-white leading-[125%] font-bold text-[32px]">
+        {content.title}
+      </h2>
+      <p class="text-[16px] text-white leading-[150%] font-normal">
+        {content.description}
+      </p>
+    </div>
+    <CarouselTestimonials />
+  </div>
+</section>
