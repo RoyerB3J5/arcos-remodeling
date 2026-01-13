@@ -13,6 +13,24 @@ const lang = Astro.params.lang as Language;
 const translations = { es, en };
 const t = translations[lang];
 ---
+
 <Layout lang={lang} t={t}>
-  
+  <section
+    class="w-full flex justify-center items-center pt-40.5 md:pt-62 pb-14 md:pb-58"
+  >
+    <div
+      class="max-w-216 w-full flex flex-col justify-center items-center gap-10 px-5 md:px-0"
+    >
+      <div class="flex flex-col justify-center items-center gap-6">
+        <h1
+          class="text-[48px] font-title leading-[117%] font-bold text-primary text-center"
+          set:html={t.book.title}
+        />
+        <p
+          class="text-[16px] font-normal text-paragraph leading-[150%] text-center"
+          set:html={t.book.description}
+        />
+      </div>
+    </div>
+  </section>
 </Layout>

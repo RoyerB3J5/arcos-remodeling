@@ -1,0 +1,111 @@
+---
+import Button from '../components/Button.astro';
+
+type Translations = typeof import('../i18n/es').default;
+type ServicesContent = Translations['main']['services'];
+interface Props {
+  content: ServicesContent;
+}
+const { content } = Astro.props as Props;
+const currentPath = Astro.url.pathname;
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
+---
+
+<>
+  <div class="flex flex-col justify-center items-start sm:items-center gap-6">
+    <h2
+      class="text-[32px] sm:text-[48px] text-primary font-title font-bold leading-[125%] sm:leading-[117%] text-start sm:text-center"
+      set:html={content.title}
+    />
+    <p
+      class="text-[16px] leading-[150%] font-normal text-paragraph text-strat sm:text-center"
+      set:html={content.description}
+    />
+  </div>
+  <div class="flex flex-col justify-center items-center w-full gap-6">
+    <div
+      class="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-6 max-w-150 md:max-w-none"
+    >
+      {
+        content.items.map((item) => (
+          <div class="flex flex-col justify-center items-center w-full h-full">
+            <img
+              src={`/images/${item.image}.webp`}
+              alt={item.title}
+              width="700"
+              height="394"
+              class="w-full h-auto"
+              decoding="async"
+              loading="lazy"
+            />
+            <div class="flex flex-col bg-back justify-center items-start gap-6 px-6 py-10 sm:p-10 w-full h-full">
+              <div class="w-full flex justify-between items-center">
+                <h3 class="text-[32px] font-bold text-primary-2 leading-[125%] font-title">
+                  {item.title}
+                </h3>
+                <Button
+                  text={item.button.label}
+                  textClass="text-primary"
+                  href={`/${lang}/services/${item.button.href}`}
+                  extraBtnClass={`bg-secondary hidden sm:flex`}
+                  iconName="arrow"
+                  iconClass="text-primary"
+                />
+              </div>
+              <p class="text-[16px] font-normal uppercase leading-[150%] text-paragraph tracking-[2px]">
+                {item.description}
+              </p>
+              <Button
+                text={item.button.label}
+                textClass="text-primary"
+                href={`/${lang}/services/${item.button.href}`}
+                extraBtnClass={`bg-secondary sm:hidden flex`}
+                iconName="arrow"
+                iconClass="text-primary"
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="w-full flex flex-col md:flex-row justify-center items-stretch">
+      <img
+        src={`/images/${content.service5.image}.webp`}
+        alt={content.service5.title}
+        width="800"
+        height="492"
+        class="w-full sm:w-[50%] lg:w-[49%] h-auto order-2 md:order-1"
+      />
+      <div
+        class="w-full sm:w-[50%] lg:w-[51%] self-stretch flex flex-col justify-center items-start px-4.5 xl:px-10 gap-6 md:gap-3 lg:gap-6 bg-back order-1 md:order-2 py-8 sm:py-3 lg:py-0"
+      >
+        <div class="w-full flex justify-between items-start">
+          <h3
+            class="text-[32px] font-bold text-primary-2 leading-[125%] font-title"
+          >
+            {content.service5.title}
+          </h3>
+          <Button
+            text={content.service5.button.label}
+            textClass="text-primary"
+            href={`/${lang}/services/${content.service5.button.href}`}
+            extraBtnClass={`bg-secondary`}
+            iconName="arrow"
+            iconClass="text-primary"
+          />
+        </div>
+        <ul class="w-full list-disc pl-6 space-y-4 marker:text-paragraph">
+          {
+            content.service5.items.map((item) => (
+              <li class="text-[16px] text-paragraph uppercase tracking-[2px] leading-[150%] font-normal">
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</>

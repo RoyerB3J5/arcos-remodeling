@@ -2,6 +2,8 @@
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import ServicesContent from '../../../sections/ServicesContent.astro';
+import Improve from '../../../sections/main/Improve.astro';
 import type { Language } from '../../../types/language.type';
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
@@ -13,6 +15,14 @@ const lang = Astro.params.lang as Language;
 const translations = { es, en };
 const t = translations[lang];
 ---
+
 <Layout lang={lang} t={t}>
-  
+  <section
+    class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 pt-40.5 lg:pt-62 pb-14 md:pb-30"
+  >
+    <div class="w-full flex flex-col justify-center items-center gap-14">
+      <ServicesContent content={t.servicesPage.services} />
+    </div>
+    <Improve content={t.servicesPage.improve} />
+  </section>
 </Layout>

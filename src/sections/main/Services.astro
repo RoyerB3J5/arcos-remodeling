@@ -1,5 +1,6 @@
 ---
 import Button from '../../components/Button.astro';
+import ServicesContent from '../ServicesContent.astro';
 
 type Translations = typeof import('../../i18n/es').default;
 type ServicesContent = Translations['main']['services'];
@@ -16,59 +17,5 @@ const lang = match ? match[1] : 'en';
 <section
   class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-10 md:gap-14 pt-14 lg:pt-30"
 >
-  <div class="flex flex-col justify-center items-start sm:items-center gap-6">
-    <h2
-      class="text-[32px] sm:text-[48px] text-primary font-title font-bold leading-[125%] sm:leading-[117%] text-start sm:text-center"
-      set:html={content.title}
-    />
-    <p
-      class="text-[16px] leading-[150%] font-normal text-paragraph text-strat sm:text-center"
-      set:html={content.description}
-    />
-  </div>
-  <div
-    class="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-6 max-w-150 md:max-w-none"
-  >
-    {
-      content.items.map((item) => (
-        <div class="flex flex-col justify-center items-center w-full h-full">
-          <img
-            src={`/images/${item.image}.webp`}
-            alt={item.title}
-            width="700"
-            height="394"
-            class="w-full h-auto"
-            decoding="async"
-            loading="lazy"
-          />
-          <div class="flex flex-col bg-back justify-center items-start gap-6 px-6 py-10 sm:p-10 w-full h-full">
-            <div class="w-full flex justify-between items-center">
-              <h3 class="text-[32px] font-bold text-primary-2 leading-[125%] font-title">
-                {item.title}
-              </h3>
-              <Button
-                text={item.button.label}
-                textClass="text-primary"
-                href={`/${lang}/services/${item.button.href}`}
-                extraBtnClass={`bg-secondary hidden sm:flex`}
-                iconName="arrow"
-                iconClass="text-primary"
-              />
-            </div>
-            <p class="text-[16px] font-normal uppercase leading-[150%] text-paragraph tracking-[2px]">
-              {item.description}
-            </p>
-            <Button
-              text={item.button.label}
-              textClass="text-primary"
-              href={`/${lang}/services/${item.button.href}`}
-              extraBtnClass={`bg-secondary sm:hidden flex`}
-              iconName="arrow"
-              iconClass="text-primary"
-            />
-          </div>
-        </div>
-      ))
-    }
-  </div>
+  <ServicesContent content={content} />
 </section>

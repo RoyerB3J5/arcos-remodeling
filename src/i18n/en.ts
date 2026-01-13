@@ -133,6 +133,21 @@ export default {
           },
         },
       ],
+      service5: {
+        image: 'service-5',
+        title: 'Additional Services',
+        items: [
+          'Painting & Wall Services',
+          'Carpentry & Installations',
+          'Outdoor & Property Services',
+          'Cleaning & Maintenance',
+          'Light Home Repairs',
+        ],
+        button: {
+          label: 'View Service',
+          href: 'additional-services',
+        },
+      },
     },
     why: {
       title: 'Why Choose <br class="hidden sm:block"/> Arcos Remodeling',
@@ -176,6 +191,7 @@ export default {
       ],
     },
     improve: {
+      img: 'improve',
       title: 'Improve Your Home with Quality Craftsmanship',
       description:
         'Schedule your painting or drywall project with Arcos Remodeling Home Improvement and enjoy professional service, clean finishes, and reliable results you can trust across New Mexico.',
@@ -206,8 +222,141 @@ export default {
         'Backed by real customer experiences, Arcos Remodeling Home Improvement is trusted for quality workmanship, attention to detail, and reliable service across New Mexico.',
     },
   },
-
+  book: {
+    title: 'Request Your Free <br/> Estimate in Minutes',
+    description:
+      'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, <br class="hidden sm:block"/> call or text <a href="tel:+15052270276">(505) 227-0276</a> and we’ll help coordinate your project.',
+  },
+  servicesPage: {
+    services: {
+      title:
+        "Discover Our Home Improvement <br class='hidden sm:block'/> Services in New Mexico",
+      description:
+        "Professional painting and drywall services designed to improve, protect, and <br class='hidden sm:block'/> enhance your home with quality workmanship and attention to detail.",
+      items: [
+        {
+          image: 'service-1',
+          title: 'Interior Painting',
+          description: 'Clean, modern interior finishes',
+          button: {
+            label: 'View Service',
+            href: 'interior-painting',
+          },
+        },
+        {
+          image: 'service-2',
+          title: 'Exterior Painting',
+          description: 'Durable, weather-resistant coatings',
+          button: {
+            label: 'View Service',
+            href: 'exterior-painting',
+          },
+        },
+        {
+          image: 'service-3',
+          title: 'Drywall Repair',
+          description: 'Seamless wall restoration',
+          button: {
+            label: 'View Service',
+            href: 'drywall-repair',
+          },
+        },
+        {
+          image: 'service-4',
+          title: 'Drywall Texture',
+          description: 'Perfect texture matching',
+          button: {
+            label: 'View Service',
+            href: 'drywall-texture',
+          },
+        },
+      ],
+      service5: {
+        image: 'service-5',
+        title: 'Additional Services',
+        items: [
+          'Painting & Wall Services',
+          'Carpentry & Installations',
+          'Outdoor & Property Services',
+          'Cleaning & Maintenance',
+          'Light Home Repairs',
+        ],
+        button: {
+          label: 'View Service',
+          href: 'additional-services',
+        },
+      },
+    },
+    improve: {
+      img: 'improve-service',
+      title: 'Supporting Text',
+      description:
+        'Choose the right service for your project and schedule professional painting or drywall work with Arcos Remodeling Home Improvement. Clean finishes, attention to detail, and reliable results across New Mexico.',
+      buttons: [
+        {
+          label: 'Book Now!',
+          href: '#',
+          icon: 'arrow',
+          color: 'bg-white',
+        },
+        {
+          label: 'Call Now',
+          href: '#',
+          icon: 'phone',
+          color: 'bg-secondary',
+        },
+      ],
+    },
+  },
   services: {},
 
-  footer: {},
+  footer: {
+    description:
+      'Quality Home <br class="hidden lg:block"/> Improvements <br class="hidden md:block lg:hidden"/> You Can <br class="hidden lg:block"/> Trust ',
+    service: {
+      title: ' Services',
+      items: [
+        {
+          title: 'Interior Painting',
+          href: 'interior-painting',
+        },
+        {
+          title: 'Exterior Painting',
+          href: 'exterior-painting',
+        },
+        {
+          title: 'Drywall Repair',
+          href: 'drywall-repair',
+        },
+        {
+          title: 'Drywall Texture',
+          href: 'drywall-texture',
+        },
+      ],
+    },
+    schedules: {
+      title: 'Business Hours',
+      items: ['Monday - Sunday', '8:00 AM - 6:00 PM', 'Cookies Polityes'],
+    },
+    contact: {
+      title: 'Contact Us',
+      items: [
+        {
+          icon: 'map-1',
+          text: 'Serving New Mexico',
+          href: '#',
+        },
+        {
+          icon: 'mail-1',
+          text: 'arcosc83@gmail.com',
+          href: 'https://mail.google.com/mail/?view=cm&fs=1&to=arcosc83@gmail.com',
+        },
+        {
+          icon: 'phone-1',
+          text: '(505) 227-0276',
+          href: 'tel:+15052270276',
+        },
+      ],
+    },
+  },
 };

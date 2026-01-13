@@ -1,0 +1,168 @@
+---
+import { Icon } from 'astro-icon/components';
+import ChangeLanguage from './ChangeLanguage.astro';
+
+type Translations = typeof import('../i18n/en').default;
+type FooterContent = Translations['footer'];
+interface Props {
+  content?: FooterContent;
+}
+const { content } = Astro.props as Props;
+
+// Obtener la ruta actual y normalizar el path sin prefijo de idioma
+const currentPath = Astro.url.pathname;
+// Normalizar: remover idioma y trailing slash
+const normalized =
+  currentPath.replace(/^\/(en|es)/, '').replace(/\/$/, '') || '/';
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
+
+const icons = [
+  {
+    icon: 'facebook',
+    href: 'https://www.facebook.com/Grooming.Monarca.spa/',
+  },
+  {
+    icon: 'instagram',
+    href: 'https://www.instagram.com/monarca.pets.spa/',
+  },
+  {
+    icon: 'tiktok',
+    href: 'https://www.tiktok.com/@monarcagrooming',
+  },
+];
+---
+
+<footer class="flex flex-col justify-center items-center w-full">
+  <div
+    class="bg-back flex justify-center items-center px-5 xl:px-0 py-17 lg:py-24 w-full"
+  >
+    <div
+      class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-start gap-8 sm:max-w-[70%]"
+    >
+      <a href="/">
+        <img
+          src="/images/logo-3.svg"
+          alt="Logo del Footer de Arcos Remodeling"
+          width="224"
+          height="70"
+          class="w-56 h-auto"
+        />
+      </a>
+      <div
+        class="w-full flex flex-col md:flex-row justify-center md:justify-between items-start gap-20 md:gap-0"
+      >
+        <div class="flex flex-col justify-center items-start gap-8">
+          <p
+            class="font-title text-primary text-[24px] font-bold leading-[120%] tracking-[3.6px] uppercase w-auto inline-block"
+            set:html={content?.description}
+          />
+          <div class="flex justify-center items-center gap-4">
+            {
+              icons.map((item) => (
+                <a
+                  href={item.href}
+                  class="w-10 h-10 flex justify-center items-center bg-primary hover:bg-secondary cursor-pointer transition-all duration-200 ease-in-out"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon name={item.icon} class={'w-3.5 h-3.5 text-white'} />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        <div
+          class="w-full md:w-auto flex flex-col md:flex-row justify-center items-start gap-10 xl:gap-28"
+        >
+          <div class="flex flex-col justify-center items-start gap-4">
+            <h4
+              class="text-[20px] uppercase leading-[120%] font-medium text-primary"
+            >
+              {content?.service.title}
+            </h4>
+            <div class="flex flex-col justify-center items-start gap-4">
+              {
+                content?.service.items.map((item) => (
+                  <a
+                    href={`/${lang}/services/${item.href}`}
+                    class="text-[16px] leading-[120%] font-normal hover:font-medium text-paragraph hover:text-primary transition-all duration-300 ease-in-out"
+                  >
+                    {item.title}
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-start gap-4">
+            <h4
+              class="text-[20px] uppercase leading-[120%] font-medium text-primary"
+            >
+              {content?.schedules.title}
+            </h4>
+            <div class="flex flex-col justify-center items-start gap-4">
+              {
+                content?.schedules.items.map((item) => (
+                  <p class="text-[16px] leading-[120%] font-normal text-paragraph ">
+                    {item}
+                  </p>
+                ))
+              }
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-start gap-4">
+            <h4
+              class="text-[20px] uppercase leading-[120%] font-medium text-primary"
+            >
+              {content?.contact.title}
+            </h4>
+            <div class="flex flex-col justify-center items-start gap-4">
+              {
+                content?.contact.items.map((item) => (
+                  <div class="flex justify-start items-center gap-3">
+                    <div class="border border-paragraph h-5.5 w-5.5 flex justify-center items-center ">
+                      <Icon name={item.icon} class="w-3 h-3 text-paragraph" />
+                    </div>
+                    <a
+                      href={item.href}
+                      class="text-[16px] leading-[120%] font-normal text-paragraph cursor-pointer"
+                    >
+                      {item.text}
+                    </a>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bg-[#E5E5E5] w-full py-6 md:py-7.75 flex justify-center items-center px-5 xl:px-0"
+  >
+    <div
+      class="w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center md:justify-between items-center gap-8 md:gap-4"
+    >
+      <a href="/">
+        <img
+          src="/images/inkshape.svg"
+          alt=" Logo de Inkshape Group"
+          width="208"
+          height="40"
+          class="w-52 h-auto"
+        />
+      </a>
+      <p
+        class="text-[16px] leading-[120%] text-[#404040] font-normal text-center"
+      >
+        Copyright © 2026 by <a href="https://inkshapegroup.com"
+          >Inkshape Group</a
+        > | Privacy | <a href="/">Arcos Remodeling</a> | New Mexico | Call Now: <a
+          href="tel:+15052270276">+1 (505) 227-0276</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>
