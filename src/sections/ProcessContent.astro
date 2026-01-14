@@ -1,0 +1,57 @@
+---
+type Translations = typeof import('../i18n/es').default;
+type ProcessContent = Translations['main']['process'];
+interface Props {
+  content: ProcessContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<>
+  <div class="flex flex-col justify-center items-center gap-6">
+    <h2
+      class="text-[32px] md:text-[48px] font-bold leading-[125%] md:leading-[117%] font-title text-primary"
+    >
+      {content.title}
+    </h2>
+    <p class="text-[16px] text-paragraph leading-[150%] font-normal">
+      {content.description}
+    </p>
+  </div>
+  <div
+    class="w-full flex flex-col md:flex-row justify-center items-center md:justify-between md:items-stretch gap-6"
+  >
+    {
+      content.steps.map((step, index) => (
+        <div class="w-full flex flex-col justify-center items-center min-h-0 max-w-102.75">
+          <div class="flex flex-col justify-start items-start gap-6 pt-14.5 pb-10 px-8.5 md:px-10 bg-back relative flex-1">
+            <div class="absolute top-0 right-0 flex justify-center items-center">
+              <div class="w-14.75 h-4.5 bg-primary" />
+              <div class="w-4.5 h-4.5 bg-secondary" />
+            </div>
+            <div class="w-13 h-13 bg-primary flex justify-center items-center">
+              <p class="text-[40px] font-extrabold font-title text-white leading-[100%]">
+                {index + 1}
+              </p>
+            </div>
+            <p class="text-[32px] text-primary font-title leading-[125%] font-bold">
+              {step.title}
+            </p>
+            <p class="text-[16px] text-paragraph leading-[150%] font-normal">
+              {step.description}
+            </p>
+          </div>
+          <img
+            src={`/images/process-${index + 1}.webp`}
+            alt={step.title}
+            width="600"
+            height="338"
+            decoding="async"
+            loading="lazy"
+            class="w-full h-auto mt-auto"
+          />
+        </div>
+      ))
+    }
+  </div>
+</>

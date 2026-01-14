@@ -7,54 +7,11 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
-
-{
-  /* <section class="flex justify-center items-center w-full h-screen max-h-225 overflow-hidden">
-  <div class="w-[50%] h-full bg-primary"></div>
-  <div class="relative overflow-hidden w-[50%] h-auto aspect-720/900 max-h-225">
-    <img
-      src="/images/main.webp"
-      alt="Imagen de Arco Remodeling"
-      class="absolute inset-0 w-full h-full object-cover object-[50%_50%]"
-      width="720"
-      height="900"
-    />
-  </div>
-</section>*/
-}
-{
-  /*<section class="flex justify-center items-center w-full h-screen overflow-hidden">
-  <div class="flex-1 min-w-0 h-full bg-primary"></div>
-  <div class="relative overflow-hidden w-auto h-screen aspect-720/900 ">
-    <img
-      src="/images/main.webp"
-      alt="Imagen de Arco Remodeling"
-      class="absolute inset-0 w-full h-full object-cover "
-      width="720"
-      height="900"
-    />
-  </div>
-</section> */
-}
-{
-  /* <section class="flex justify-center items-center w-full h-screen  overflow-hidden">
-  <div class="w-[50%] h-full bg-primary"></div>
-  <div class="relative overflow-hidden w-[50%] h-full ">
-    <img
-      src="/images/main.webp"
-      alt="Imagen de Arco Remodeling"
-      class="absolute inset-0 w-full h-full object-cover object-bottom"
-      width="720"
-      height="900"
-    />
-  </div>
-</section> */
-}
 <section
-  class="flex flex-col sm:flex-row justify-center items-center w-full h-screen sm:h-auto aspect-auto sm:aspect-1440/900 max-h-screen overflow-hidden relative"
+  class="flex flex-col sm:flex-row justify-center items-center w-full h-screen sm:h-auto lg:h-screen aspect-auto sm:aspect-1440/900 lg:aspect-auto max-h-screen overflow-hidden relative"
 >
   <div
-    class="w-full sm:w-[50%] bg-primary order-2 sm:order-1 py-8 px-5 flex justify-center items-center flex-1 h-auto sm:h-full"
+    class="flex-1 min-w-0 h-auto sm:h-full bg-primary w-full sm:w-1/2 lg:w-full self-stretch order-2 sm:order-1 py-8 px-5 flex justify-center items-center"
   >
     <div
       class="flex sm:hidden flex-col justify-center items-start gap-8 w-full"
@@ -87,16 +44,14 @@ const { content } = Astro.props as Props;
     </div>
   </div>
   <div
-    class="relative overflow-hidden w-full sm:w-[50%] aspect-720/900 sm:h-full order-1 sm:order-2"
+    class="relative overflow-hidden w-full sm:w-1/2 lg:w-auto h-auto sm:h-full lg:h-screen aspect-720/900 order-1 sm:order-2"
   >
     <img
       src="/images/main.webp"
       alt="Imagen de Arco Remodeling"
-      class="w-full h-full object-cover sm:object-fill"
+      class="relative lg:absolute lg:inset-0 w-full sm:w-auto lg:w-full h-auto sm:h-full object-cover"
       width="720"
       height="900"
-      decoding="async"
-      loading="eager"
     />
   </div>
   <div

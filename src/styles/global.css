@@ -35,15 +35,14 @@
   --font-family: 'Inter', 'NeueMontreal', sans-serif;
   --font-title: 'Komet';
   --color-primary: #103350;
-  --color-primary-2: #002E4F;
-  --color-secondary: #BEC01B;
-  --color-secondary-2:#BFC100;
-  --color-back: #F4F6F2;
-  --color-back-2: #3E6C8A;
-  --color-paragraph: #2C2C2C;
+  --color-primary-2: #002e4f;
+  --color-secondary: #bec01b;
+  --color-secondary-2: #bfc100;
+  --color-back: #f4f6f2;
+  --color-back-2: #3e6c8a;
+  --color-paragraph: #2c2c2c;
   --breakpoint-xs: 400px;
   --breakpoint-4xl: 1750px;
-  --breakpoint-3xl: 2000px;
 }
 
 @keyframes shake {

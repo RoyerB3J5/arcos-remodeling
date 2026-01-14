@@ -1,0 +1,133 @@
+---
+import Button from '../../components/Button.astro';
+type Translations = typeof import('../../i18n/es').default;
+type HeroContent = Translations['services']['additional-services']['hero'];
+interface Props {
+  content: HeroContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="flex flex-col lg:flex-row justify-center items-center w-full h-auto lg:h-screen aspect-auto lg:aspect-auto max-h-none lg:max-h-screen overflow-hidden relative"
+>
+  <div
+    class="flex-1 min-w-0 h-auto lg:h-full bg-primary w-full lg:w-full self-stretch order-2 lg:order-1 py-8 px-5 flex justify-center items-center"
+  >
+    <div
+      class="flex lg:hidden flex-col justify-center items-start gap-8 w-full"
+    >
+      <div class="flex flex-col justify-center items-start gap-4">
+        <p
+          class="text-[24px] text-white leading-[133%] uppercase tracking-[2px] font-normal"
+        >
+          {content.subtitle}
+        </p>
+        <h1
+          class="text-[48px] font-title text-secondary leading-[117%] font-extrabold"
+        >
+          {content.title}
+        </h1>
+        <p class="text-[16px] leading-[150%] font-normal text-white">
+          {content.description}
+        </p>
+      </div>
+      <div class="flex flex-col justify-center items-start gap-4">
+        <p class="text-secondary text-[24px] font-bold leading-[133%]">
+          {content.titleWhy}
+        </p>
+        <ul class="flex flex-col justify-center items-start gap-4">
+          {
+            content.reasons.map((item) => (
+              <li class="flex justify-start items-center gap-2">
+                <img
+                  src="/images/check.svg"
+                  alt="Check icon"
+                  width="24"
+                  height="18"
+                  class="w-6 h-auto"
+                />
+                <p class="text-white text-[16px] leading-[120%] font-normal">
+                  {item}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <Button
+        text={content.button.label}
+        textClass="text-primary"
+        href={content.button.href}
+        extraBtnClass={`bg-white animate-shake`}
+        iconName="arrow"
+        iconClass="text-primary"
+      />
+    </div>
+  </div>
+  <div
+    class="relative overflow-hidden w-full lg:w-auto h-auto lg:h-screen aspect-720/900 order-1 lg:order-2"
+  >
+    <img
+      src={`/images/${content.image}.webp`}
+      alt={`Imagen de Servicios de Arco Remodeling - ${content.title}`}
+      class="relative lg:absolute lg:inset-0 w-full h-auto lg:h-full object-cover"
+      width="720"
+      height="900"
+    />
+  </div>
+  <div
+    class="w-full max-w-screen md:max-w-7xl lg:flex justify-start items-end 4xl:items-center px-5 xl:px-0 absolute hidden h-full pb-[2%] 4xl:pb-0"
+  >
+    <div
+      class="flex flex-col justify-center items-start gap-8 max-w-1/2 translate-y-0"
+    >
+      <div class="flex flex-col justify-center items-start gap-4">
+        <p
+          class="text-[24px] text-white leading-[133%] uppercase tracking-[2px] font-normal"
+        >
+          {content.subtitle}
+        </p>
+        <h1
+          class="text-[48px] font-title text-secondary leading-[117%] font-extrabold"
+        >
+          {content.title}
+        </h1>
+        <p class="text-[16px] leading-[150%] font-normal text-white">
+          {content.description}
+        </p>
+      </div>
+      <div class="flex flex-col justify-center items-start gap-4">
+        <p class="text-secondary text-[24px] font-bold leading-[133%]">
+          {content.titleWhy}
+        </p>
+        <ul class="flex flex-col justify-center items-start gap-4">
+          {
+            content.reasons.map((item) => (
+              <li class="flex justify-start items-center gap-2">
+                <img
+                  src="/images/check.svg"
+                  alt="Check icon"
+                  width="24"
+                  height="18"
+                  class="w-6 h-auto"
+                />
+                <p class="text-white text-[16px] leading-[120%] font-normal">
+                  {item}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <Button
+        text={content.button.label}
+        textClass="text-primary"
+        href={content.button.href}
+        extraBtnClass={`bg-white animate-shake`}
+        iconName="arrow"
+        iconClass="text-primary"
+      />
+    </div>
+  </div>
+</section>

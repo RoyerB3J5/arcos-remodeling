@@ -1,0 +1,59 @@
+---
+type Translations = typeof import('../../i18n/es').default;
+type HeroContent =
+  Translations['services']['additional-services']['additionalService'];
+interface Props {
+  content: HeroContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<div class="w-full flex flex-col justify-center items-center gap-10 md:gap-14">
+  <div class="flex flex-col justify-center items-center gap-6">
+    <h2
+      class="text-[48px] text-center text-primary font-title font-bold leading-[117%]"
+    >
+      {content.title}
+    </h2>
+    <p
+      class="text-[#2C2C2C] text-center text-[16px] font-normal leading-[150%]"
+    >
+      {content.description}
+    </p>
+  </div>
+  <div class="w-full flex flex-col justify-center items-center gap-10 md:gap-6">
+    {
+      content.items.map((item) => (
+        <div class="flex flex-col md:flex-row justify-center items-stretch">
+          <div class="w-full md:w-[50%] self-stretch flex flex-col justify-center items-start px-4.5 xl:px-7 gap-6 md:gap-3 lg:gap-4  order-2 md:order-1 py-10 sm:py-8 md:py-3 lg:py-0 bg-back">
+            <h3 class="text-primary font-bold text-[32px] sm:text-[24px] lg:text-[48px] font-title leading-[116%]">
+              {item.title}
+            </h3>
+            <p class="text-[#1D1D1D] text-[16px] leading-[150%] font-normal">
+              {item.description}
+            </p>
+            <div class="flex flex-col justify-center items-start gap-3">
+              <p class="text-[#1D1D1D] text-[16px] leading-[150%] font-bold">
+                {item.title2}
+              </p>
+              <ul class="flex flex-col justify-center items-start gap-2 list-disc list-inside pl-4">
+                {item.services.map((service) => (
+                  <li class="text-[#1D1D1D] text-[16px] leading-[150%] font-normal">
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <img
+            src={`/images/${item.image}.webp`}
+            alt={` Mejora ${item.title}`}
+            width="750"
+            height="487"
+            class="w-full md:w-[50%] h-auto order-1 md:order-2"
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>

@@ -2,14 +2,20 @@
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import Improve from '../../../sections/main/Improve.astro';
+import ProcessContent from '../../../sections/ProcessContent.astro';
+import Additional from '../../../sections/services/Additional.astro';
+import Hero from '../../../sections/services/Hero.astro';
+import Includes from '../../../sections/services/Includes.astro';
 import type { Language } from '../../../types/language.type';
 
 export function getStaticPaths() {
   const services = [
     'interior-painting',
     'exterior-painting',
-    'draywall-repair',
-    'draywall-texture'
+    'drywall-repair',
+    'drywall-texture',
+    'additional-services',
   ];
   const languages = ['es', 'en'];
 
@@ -27,6 +33,23 @@ const translations = { es, en };
 const t = translations[lang];
 const serviceData = t.services[service as keyof typeof t.services];
 ---
-<Layout lang={lang} t={t}>
 
+<Layout lang={lang} t={t}>
+  <Hero content={serviceData.hero} />
+  <section
+    class="w-full max-w-screen md:max-w-7xl mx-auto px-5 xl:px-0 py-14 md:py-30 flex flex-col justify-center items-center gap-14 md:gap-20"
+  >
+    {
+      serviceData.additionalService.title && (
+        <Additional content={serviceData.additionalService} />
+      )
+    }
+    <Includes content={serviceData.includes} />
+    <div
+      class="w-full flex flex-col justify-center items-center gap-10 md:gap-14"
+    >
+      <ProcessContent content={serviceData.process} />
+    </div>
+    <Improve content={serviceData.improve} />
+  </section>
 </Layout>
