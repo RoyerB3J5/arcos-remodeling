@@ -898,6 +898,132 @@ export default {
       },
     },
   },
+  'about-us': {
+    hero: {
+      title:
+        "<span class='text-secondary'>Crafted with care.</span> <br/> Defined by quality.",
+    },
+    info: {
+      title: 'About Arcos Remodeling',
+      description:
+        'Arcos Remodeling Home Improvement was founded with a clear goal: to provide high-quality home improvement services built on responsibility, punctuality, and respect for every client. What started as an independent effort to grow professionally has become a trusted service focused on delivering clean, precise, and reliable results for homeowners.',
+      items: [
+        {
+          icon: 'home',
+          title: 'Our Story',
+          description:
+            'Arcos Remodeling was founded with the goal of building something honest and long-lasting through quality work. Over time, this commitment has driven growth through referrals and satisfied clients. The name reflects the founder’s last name, symbolizing personal responsibility and pride in every project.',
+        },
+        {
+          icon: 'vision',
+          title: 'Our Vision',
+          description:
+            'Arcos Remodeling Home Improvement is focused on continuing to grow, expanding its client base, and strengthening its presence across New Mexico. The long-term vision includes broadening services within the construction industry while maintaining the same level of quality and attention to detail that defines the company today.',
+        },
+      ],
+    },
+    gallery: {
+      title: 'Beautiful Homes. Quality Results.',
+      description:
+        'See our latest projects, real transformations, and finished work completed for homeowners across <br class="hidden sm:block"/> New Mexico. Every image reflects our commitment to quality craftsmanship, attention to detail, and <br class="hidden sm:block"/>  results done right the first time.',
+      images: ['gallery-1', 'gallery-2', 'gallery-3', 'gallery-4'],
+    },
+    improve: {
+      img: 'call-about',
+      title: 'Trust Built on Experience',
+      description:
+        'Our certifications are reflected in the quality of our work, years of hands-on experience, and the satisfaction of our clients. At Arcos Remodeling Home Improvement, every project is backed by professional standards, attention to detail, and a strong commitment to doing the job right across New Mexico.',
+      buttons: [
+        {
+          label: 'Book Now!',
+          href: '#',
+          icon: 'arrow',
+          color: 'bg-white',
+        },
+        {
+          label: 'Call Now',
+          href: '#',
+          icon: 'phone',
+          color: 'bg-secondary',
+        },
+      ],
+    },
+  },
+  faq: {
+    hero: {
+      title: 'Frequently asked questions',
+      description:
+        'Check out our frequently asked questions to learn more about Arcos Remodeling',
+      questions: [
+        {
+          title: 'Do you provide services at my home?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'What services do you offer?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'Do you serve all of New Mexico?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'Do you offer free estimates?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'How long does a project usually take?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'Do I need to be home during the service?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'Do you provide the materials?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'How do I schedule a service?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+        {
+          title: 'What if I need to reschedule or cancel?',
+          answer:
+            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+        },
+      ],
+    },
+
+    improve: {
+      img: 'call-faq',
+      title: 'Still Have Questions?',
+      description:
+        'If you need more information or would like to discuss your project, we’re here to help.',
+      buttons: [
+        {
+          label: 'Book Now!',
+          href: '#',
+          icon: 'arrow',
+          color: 'bg-white',
+        },
+        {
+          label: 'Call Now',
+          href: '#',
+          icon: 'phone',
+          color: 'bg-secondary',
+        },
+      ],
+    },
+  },
   footer: {
     description:
       'Quality Home <br class="hidden lg:block"/> Improvements <br class="hidden md:block lg:hidden"/> You Can <br class="hidden lg:block"/> Trust ',

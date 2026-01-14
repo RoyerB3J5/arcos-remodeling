@@ -203,7 +203,7 @@ export default {
           color: 'bg-white',
         },
         {
-          label: 'Llamar Ahora',
+          label: 'Llamar Ya',
           href: '#',
           icon: 'phone',
           color: 'bg-secondary',
@@ -223,84 +223,84 @@ export default {
     },
   },
   book: {
-    title: 'Request Your Free <br/> Estimate in Minutes',
+    title: 'Solicita tu presupuesto gratis <br/> en minutos',
     description:
-      'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, <br class="hidden sm:block"/> call or text <a href="tel:+15052270276">(505) 227-0276</a> and we’ll help coordinate your project.',
+      'Gracias por elegir Arcos Remodeling Home Improvement. Si estos horarios no funcionan, <br class="hidden sm:block"/> llama o envía un mensaje al <a href="tel:+15052270276">(505) 227-0276</a> y te ayudaremos a coordinar tu proyecto.',
   },
   servicesPage: {
     services: {
       title:
-        "Discover Our Home Improvement <br class='hidden sm:block'/> Services in New Mexico",
+        'Descubre nuestros servicios de mejora del hogar <br class="hidden sm:block"/> en Nuevo México',
       description:
-        "Professional painting and drywall services designed to improve, protect, and <br class='hidden sm:block'/> enhance your home with quality workmanship and attention to detail.",
+        'Servicios profesionales de pintura y drywall diseñados para mejorar, proteger y <br class="hidden sm:block"/> realzar tu hogar con mano de obra de calidad y atención al detalle.',
       items: [
         {
           image: 'service-1',
-          title: 'Interior Painting',
-          description: 'Clean, modern interior finishes',
+          title: 'Pintura interior',
+          description: 'Acabados modernos y limpios en interiores',
           button: {
-            label: 'View Service',
+            label: 'Ver servicio',
             href: 'interior-painting',
           },
         },
         {
           image: 'service-2',
-          title: 'Exterior Painting',
-          description: 'Durable, weather-resistant coatings',
+          title: 'Pintura exterior',
+          description: 'Recubrimientos duraderos resistentes al clima',
           button: {
-            label: 'View Service',
+            label: 'Ver servicio',
             href: 'exterior-painting',
           },
         },
         {
           image: 'service-3',
-          title: 'Drywall Repair',
-          description: 'Seamless wall restoration',
+          title: 'Reparación de drywall',
+          description: 'Restauración impecable de muros',
           button: {
-            label: 'View Service',
+            label: 'Ver servicio',
             href: 'drywall-repair',
           },
         },
         {
           image: 'service-4',
-          title: 'Drywall Texture',
-          description: 'Perfect texture matching',
+          title: 'Texturizado de drywall',
+          description: 'Coincidencia exacta de texturas',
           button: {
-            label: 'View Service',
+            label: 'Ver servicio',
             href: 'drywall-texture',
           },
         },
       ],
       service5: {
         image: 'service-5',
-        title: 'Additional Services',
+        title: 'Servicios adicionales',
         items: [
-          'Painting & Wall Services',
-          'Carpentry & Installations',
-          'Outdoor & Property Services',
-          'Cleaning & Maintenance',
-          'Light Home Repairs',
+          'Pintura y servicios de muros',
+          'Carpintería e instalaciones',
+          'Servicios exteriores y de propiedad',
+          'Limpieza y mantenimiento',
+          'Pequeñas reparaciones domésticas',
         ],
         button: {
-          label: 'View Service',
+          label: 'Ver servicio',
           href: 'additional-services',
         },
       },
     },
     improve: {
       img: 'improve-service',
-      title: 'Supporting Text',
+      title: 'Texto de apoyo',
       description:
-        'Choose the right service for your project and schedule professional painting or drywall work with Arcos Remodeling Home Improvement. Clean finishes, attention to detail, and reliable results across New Mexico.',
+        'Elige el servicio adecuado para tu proyecto y programa trabajo profesional de pintura o drywall con Arcos Remodeling. Acabados limpios, atención al detalle y resultados confiables en Nuevo México.',
       buttons: [
         {
-          label: 'Book Now!',
+          label: 'Reservar Ya!',
           href: '#',
           icon: 'arrow',
           color: 'bg-white',
         },
         {
-          label: 'Call Now',
+          label: 'Llamar Ya',
           href: '#',
           icon: 'phone',
           color: 'bg-secondary',
@@ -311,19 +311,19 @@ export default {
   services: {
     'interior-painting': {
       hero: {
-        subtitle: 'PROFESSIONAL, CLEAN FINISHES FOR YOUR HOME.',
-        title: 'Interior Painting Services ',
+        subtitle: 'ACABADOS PROFESIONALES Y LIMPIOS PARA TU HOGAR.',
+        title: 'Servicios de pintura interior',
         description:
-          'Transform your home with professional interior painting services designed to refresh your spaces and enhance comfort. At Arcos Remodeling Home Improvement, we deliver clean lines, smooth finishes, and long-lasting results with attention to every detail.',
-        titleWhy: 'Why Choose Our Interior Painting Services',
+          'Renueva tu hogar con servicios profesionales de pintura interior pensados para refrescar tus espacios y mejorar el confort. En Arcos Remodeling ofrecemos líneas limpias, acabados suaves y resultados duraderos con atención a cada detalle.',
+        titleWhy: 'Por qué elegir nuestros servicios de pintura interior',
         reasons: [
-          'One-on-one project attention',
-          'Clean and organized work areas',
-          'Quality materials and precise application',
-          'Respect for your home and schedule',
+          'Atención personalizada al proyecto',
+          'Áreas de trabajo limpias y organizadas',
+          'Materiales de calidad y aplicación precisa',
+          'Respeto por tu hogar y horarios',
         ],
         button: {
-          label: 'Book Now!',
+          label: 'Reservar Ya!',
           href: '#',
         },
         image: 'hero-interior-painting',
@@ -342,72 +342,72 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Interior Painting Service',
+        title: 'Qué incluye nuestro servicio de pintura interior',
         image: 'includes-interior-painting',
         items: [
           {
-            title: 'Surface Preparation',
+            title: 'Preparación de superficies',
             description:
-              'Light surface preparation to ensure proper paint adhesion and clean, even finishes.',
+              'Preparación ligera de superficies para asegurar la adhesión de la pintura y acabados uniformes.',
           },
           {
-            title: 'Professional Patching',
+            title: 'Parcheo profesional',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Revisión inicial del proyecto y parches profesionales según sea necesario.',
           },
           {
-            title: 'Minor Wall Touch-Ups',
+            title: 'Pequeños retoques en muros',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Retoques menores para dejar superficies listas para pintar.',
           },
           {
-            title: 'Area Protection',
+            title: 'Protección de áreas',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Protegemos muebles y pisos para mantener el espacio limpio durante el trabajo.',
           },
           {
-            title: 'Clean Finish',
+            title: 'Acabado limpio',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Terminamos con acabados pulcros y listos para disfrutar.',
           },
         ],
       },
       process: {
-        title: 'A Simple and Professional Process',
+        title: 'Un proceso simple y profesional',
         description:
-          'In just 3 easy steps, we deliver quality painting and drywall services with clean and reliable results.',
+          'En solo 3 pasos entregamos servicios de pintura y drywall con resultados limpios y confiables.',
         steps: [
           {
-            title: 'Easy Scheduling',
+            title: 'Programación sencilla',
             description:
-              'We discuss your project, answer your questions, and schedule your service at a time that works best for you.',
+              'Hablamos de tu proyecto, aclaramos dudas y agendamos el servicio en el momento que te convenga.',
           },
           {
-            title: 'We Get to Work',
+            title: 'Manos a la obra',
             description:
-              'Our team arrives prepared and on time, completing the job with attention to detail, clean execution, and respect for your home.',
+              'Nuestro equipo llega preparado y puntual, trabajando con atención al detalle y respeto por tu hogar.',
           },
           {
-            title: 'Quality Results',
+            title: 'Resultados de calidad',
             description:
-              'We finish the project to your satisfaction, ensuring clean finishes, durable results, and a job done right the first time.',
+              'Entregamos acabados duraderos y un trabajo bien hecho a la primera.',
           },
         ],
       },
       improve: {
         img: 'call-interior-painting',
-        title: 'Refresh Your Home with Professional Interior Painting',
+        title: 'Renueva tu hogar con pintura interior profesional',
         description:
-          'Schedule your interior painting project with Arcos Remodeling Home Improvement and enjoy clean finishes, smooth walls, and reliable workmanship tailored to your home in New Mexico.',
+          'Programa tu proyecto de pintura interior con Arcos Remodeling y disfruta de acabados limpios, muros suaves y mano de obra confiable adaptada a tu hogar en Nuevo México.',
         buttons: [
           {
-            label: 'Book Now!',
+            label: 'Reservar Ya!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
-            label: 'Call Now',
+            label: 'Llamar Ya',
             href: '#',
             icon: 'phone',
             color: 'bg-secondary',
@@ -417,19 +417,19 @@ export default {
     },
     'exterior-painting': {
       hero: {
-        subtitle: 'DURABLE FINISHES FOR LASTING PROTECTION.',
-        title: 'Exterior Painting Services',
+        subtitle: 'ACABADOS DURADEROS PARA PROTECCIÓN A LARGO PLAZO.',
+        title: 'Servicios de pintura exterior',
         description:
-          'Protect and enhance your home with professional exterior painting services designed to withstand New Mexico’s climate. At Arcos Remodeling Home Improvement, we deliver durable coatings, clean finishes, and reliable workmanship that improves curb appeal and long-term value.',
-        titleWhy: 'Why Choose Our Exterior Painting Services',
+          'Protege y realza tu hogar con servicios profesionales de pintura exterior diseñados para resistir el clima de Nuevo México. Entregamos recubrimientos duraderos, acabados limpios y mano de obra confiable.',
+        titleWhy: 'Por qué elegir nuestros servicios de pintura exterior',
         reasons: [
-          'Weather-resistant materials and finishes',
-          'Attention to detail on every surface',
-          'Clean and organized job sites',
-          'Respect for your property and schedule',
+          'Materiales y recubrimientos resistentes al clima',
+          'Atención al detalle en cada superficie',
+          'Áreas de trabajo limpias y organizadas',
+          'Respeto por tu propiedad y horario',
         ],
         button: {
-          label: 'Book Now!',
+          label: 'Reservar Ya!',
           href: '#',
         },
         image: 'hero-exterior-painting',
@@ -448,72 +448,71 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Exterior Painting Service',
+        title: 'Qué incluye nuestro servicio de pintura exterior',
         image: 'includes-exterior-painting',
         items: [
           {
-            title: 'Surface Preparation',
+            title: 'Preparación de superficies',
             description:
-              'Basic surface preparation to support proper paint adhesion and consistent exterior finishes.',
+              'Preparación básica para asegurar una adhesión correcta y acabados exteriores consistentes.',
           },
           {
-            title: 'Professional Paint Application',
+            title: 'Aplicación profesional de pintura',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Aplicamos recubrimientos con técnicas profesionales para garantizar durabilidad.',
           },
           {
-            title: 'Minor Surface Touch-Ups',
+            title: 'Retoques menores',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Retoques y correcciones para lograr un acabado uniforme.',
           },
           {
-            title: 'Property Protection',
+            title: 'Protección de la propiedad',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Cubrimos y protegemos áreas para minimizar cualquier impacto en tu propiedad.',
           },
           {
-            title: 'Clean Final Finish',
-            description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+            title: 'Acabado final limpio',
+            description: 'Terminamos con un acabado estético y duradero.',
           },
         ],
       },
       process: {
-        title: 'A Simple and Professional Process',
+        title: 'Un proceso simple y profesional',
         description:
-          'In just 3 easy steps, we deliver quality painting and drywall services with clean and reliable results.',
+          'En solo 3 pasos entregamos servicios de pintura y drywall con resultados limpios y confiables.',
         steps: [
           {
-            title: 'Easy Scheduling',
+            title: 'Programación sencilla',
             description:
-              'We discuss your project, answer your questions, and schedule your service at a time that works best for you.',
+              'Hablamos de tu proyecto, aclaramos dudas y agendamos el servicio en el mejor horario para ti.',
           },
           {
-            title: 'We Get to Work',
+            title: 'Manos a la obra',
             description:
-              'Our team arrives prepared and on time, completing the job with attention to detail, clean execution, and respect for your home.',
+              'Llegamos preparados y puntuales, trabajando con cuidado y respeto por tu hogar.',
           },
           {
-            title: 'Quality Results',
+            title: 'Resultados de calidad',
             description:
-              'We finish the project to your satisfaction, ensuring clean finishes, durable results, and a job done right the first time.',
+              'Entregamos acabados duraderos y un trabajo bien hecho a la primera.',
           },
         ],
       },
       improve: {
         img: 'call-exterior-painting',
-        title: 'Protect and Enhance Your Home',
+        title: 'Protege y realza tu hogar',
         description:
-          'Schedule your exterior painting project with Arcos Remodeling Home Improvement and enjoy durable finishes, improved curb appeal, and reliable workmanship across New Mexico.',
+          'Programa tu proyecto de pintura exterior con Arcos Remodeling y disfruta de recubrimientos duraderos, mejor apariencia y mano de obra confiable en Nuevo México.',
         buttons: [
           {
-            label: 'Book Now!',
+            label: 'Reservar Ya!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
-            label: 'Call Now',
+            label: 'Llamar Ya',
             href: '#',
             icon: 'phone',
             color: 'bg-secondary',
@@ -523,19 +522,19 @@ export default {
     },
     'drywall-repair': {
       hero: {
-        subtitle: 'SMOOTH WALLS. FLAWLESS RESULTS.',
-        title: 'Drywall Repair Services',
+        subtitle: 'MUROS SUAVES. RESULTADOS IMPECABLES.',
+        title: 'Servicios de reparación de drywall',
         description:
-          'Restore the appearance of your walls and ceilings with professional drywall repair services. At Arcos Remodeling Home Improvement, we fix damaged drywall with precision, leaving smooth, clean surfaces ready to blend seamlessly with your home.',
-        titleWhy: 'Why Choose Our Drywall Repair Services',
+          'Restaura la apariencia de tus paredes y techos con servicios profesionales de reparación de drywall. Reparaciones precisas para dejar superficies lisas y listas para pintar.',
+        titleWhy: 'Por qué elegir nuestros servicios de reparación de drywall',
         reasons: [
-          'Smooth, professional results',
-          'Attention to detail on every repair',
-          'Clean and respectful job sites',
-          'Reliable service you can trust',
+          'Resultados profesionales y lisos',
+          'Atención al detalle en cada reparación',
+          'Áreas de trabajo limpias y respetuosas',
+          'Servicio confiable en el que puedes confiar',
         ],
         button: {
-          label: 'Book Now!',
+          label: 'Reservar Ya!',
           href: '#',
         },
         image: 'hero-drywall-repair',
@@ -554,72 +553,72 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Drywall Repair Service',
+        title: 'Qué incluye nuestro servicio de reparación de drywall',
         image: 'includes-drywall-repair',
         items: [
           {
-            title: 'Damage Assessment',
+            title: 'Evaluación de daños',
             description:
-              'Evaluation of damaged drywall areas to determine the proper repair approach.',
+              'Evaluamos las zonas dañadas para determinar la mejor solución de reparación.',
           },
           {
-            title: 'Professional Patching',
+            title: 'Parcheo profesional',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Aplicamos parches y acabados que integran la reparación con la superficie existente.',
           },
           {
-            title: 'Seamless Blending',
+            title: 'Mezcla y acabado',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Realizamos los acabados necesarios para que la superficie quede lista para pintar.',
           },
           {
-            title: 'Clean Work Area',
+            title: 'Área de trabajo limpia',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Mantenemos el área ordenada y protegida durante el trabajo.',
           },
           {
-            title: 'Paint-Ready Finish',
+            title: 'Acabado listo para pintar',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Entregamos superficies preparadas para la pintura final.',
           },
         ],
       },
       process: {
-        title: 'A Simple and Professional Process',
+        title: 'Un proceso simple y profesional',
         description:
-          'In just 3 easy steps, we deliver quality painting and drywall services with clean and reliable results.',
+          'En solo 3 pasos entregamos servicios de pintura y drywall con resultados limpios y confiables.',
         steps: [
           {
-            title: 'Easy Scheduling',
+            title: 'Programación sencilla',
             description:
-              'We discuss your project, answer your questions, and schedule your service at a time that works best for you.',
+              'Hablamos de tu proyecto, aclaramos dudas y agendamos el servicio en el mejor horario para ti.',
           },
           {
-            title: 'We Get to Work',
+            title: 'Manos a la obra',
             description:
-              'Our team arrives prepared and on time, completing the job with attention to detail, clean execution, and respect for your home.',
+              'Trabajamos con precisión y cuidado para reparar y dejar superficies lisas.',
           },
           {
-            title: 'Quality Results',
+            title: 'Resultados de calidad',
             description:
-              'We finish the project to your satisfaction, ensuring clean finishes, durable results, and a job done right the first time.',
+              'Terminamos el trabajo con acabados duraderos y profesionales.',
           },
         ],
       },
       improve: {
         img: 'call-drywall-repair',
-        title: 'Restore Your Walls',
+        title: 'Restaura tus paredes',
         description:
-          'Schedule your drywall repair service with Arcos Remodeling Home Improvement and enjoy smooth, clean walls finished with precision and professional care across New Mexico.',
+          'Programa el servicio de reparación de drywall con Arcos Remodeling y disfruta de muros lisos y bien terminados con mano de obra profesional.',
         buttons: [
           {
-            label: 'Book Now!',
+            label: 'Reservar Ya!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
-            label: 'Call Now',
+            label: 'Llamar Ya',
             href: '#',
             icon: 'phone',
             color: 'bg-secondary',
@@ -629,19 +628,19 @@ export default {
     },
     'drywall-texture': {
       hero: {
-        subtitle: 'CONSISTENT TEXTURES. CLEAN FINISHES',
-        title: 'Drywall Texture Services',
+        subtitle: 'TEXTURAS CONSISTENTES. ACABADOS LIMPIOS',
+        title: 'Servicios de texturizado de drywall',
         description:
-          'Enhance the look of your walls and ceilings with professional drywall texture services. At Arcos Remodeling Home Improvement, we apply consistent textures that blend seamlessly with existing surfaces, creating a clean and uniform appearance throughout your home.',
-        titleWhy: 'Why Choose Our Drywall Texture Services',
+          'Mejora la apariencia de paredes y techos con servicios profesionales de texturizado que se integran con las superficies existentes para un acabado uniforme.',
+        titleWhy: 'Por qué elegir nuestros servicios de texturizado',
         reasons: [
-          'Seamless texture matching',
-          'Clean and professional workmanship',
-          'Attention to detail on every surface',
-          'Reliable service you can trust',
+          'Coincidencia exacta de texturas',
+          'Mano de obra limpia y profesional',
+          'Atención al detalle en cada superficie',
+          'Servicio confiable y responsable',
         ],
         button: {
-          label: 'Book Now!',
+          label: 'Reservar Ya!',
           href: '#',
         },
         image: 'hero-drywall-texture',
@@ -660,72 +659,72 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Drywall Texture Service',
+        title: 'Qué incluye nuestro servicio de texturizado',
         image: 'includes-drywall-texture',
         items: [
           {
-            title: 'Texture Assessment',
+            title: 'Evaluación de textura',
             description:
-              'Review of existing wall or ceiling texture to determine the best matching approach.',
+              'Revisamos la textura existente para determinar la mejor forma de igualarla.',
           },
           {
-            title: 'Surface Preparation',
+            title: 'Preparación de superficies',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Preparación adecuada para asegurar un acabado uniforme.',
           },
           {
-            title: 'Texture Blending',
+            title: 'Mezcla de texturas',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Aplicamos técnicas para integrar la nueva textura con la existente.',
           },
           {
-            title: 'Texture Application',
+            title: 'Aplicación de textura',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Aplicación profesional para lograr un resultado consistente.',
           },
           {
-            title: 'Clean Finish',
+            title: 'Acabado limpio',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Terminamos con un acabado estético y listo para pintar.',
           },
         ],
       },
       process: {
-        title: 'A Simple and Professional Process',
+        title: 'Un proceso simple y profesional',
         description:
-          'In just 3 easy steps, we deliver quality painting and drywall services with clean and reliable results.',
+          'En solo 3 pasos entregamos servicios de pintura y drywall con resultados limpios y confiables.',
         steps: [
           {
-            title: 'Easy Scheduling',
+            title: 'Programación sencilla',
             description:
-              'We discuss your project, answer your questions, and schedule your service at a time that works best for you.',
+              'Hablamos de tu proyecto, aclaramos dudas y agendamos el servicio en el mejor horario para ti.',
           },
           {
-            title: 'We Get to Work',
+            title: 'Manos a la obra',
             description:
-              'Our team arrives prepared and on time, completing the job with attention to detail, clean execution, and respect for your home.',
+              'Llegamos preparados y trabajamos con cuidado para aplicar la textura adecuada.',
           },
           {
-            title: 'Quality Results',
+            title: 'Resultados de calidad',
             description:
-              'We finish the project to your satisfaction, ensuring clean finishes, durable results, and a job done right the first time.',
+              'Entregamos texturas consistentes y acabados listos para pintura.',
           },
         ],
       },
       improve: {
         img: 'call-drywall-texture',
-        title: 'Perfect Your Wall Texture',
+        title: 'Perfecciona la textura de tus paredes',
         description:
-          'Schedule your drywall texture service with Arcos Remodeling Home Improvement and achieve consistent, clean textures that blend seamlessly with your walls and ceilings across New Mexico.',
+          'Programa el servicio de texturizado con Arcos Remodeling y consigue texturas limpias y consistentes que se integren con tus muros y techos.',
         buttons: [
           {
-            label: 'Book Now!',
+            label: 'Reservar Ya!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
-            label: 'Call Now',
+            label: 'Llamar Ya',
             href: '#',
             icon: 'phone',
             color: 'bg-secondary',
@@ -735,157 +734,160 @@ export default {
     },
     'additional-services': {
       hero: {
-        subtitle: 'MORE HOME SOLUTIONS',
-        title: 'Additional Home Improvement Services',
+        subtitle: 'SOLUCIONES ADICIONALES PARA TU HOGAR',
+        title: 'Servicios adicionales de mejora del hogar',
         description:
-          'In addition to our core painting and drywall services, Arcos Remodeling Home Improvement offers a wide range of residential improvement and maintenance services. Each project is evaluated individually to ensure the right solution, quality workmanship, and reliable results.',
-        titleWhy: 'Why Choose Our Additional Services',
+          'Además de nuestros servicios principales de pintura y drywall, ofrecemos una amplia gama de soluciones residenciales. Cada proyecto se evalúa individualmente para garantizar la mejor solución y resultados confiables.',
+        titleWhy: 'Por qué elegir nuestros servicios adicionales',
         reasons: [
-          'Personalized project evaluation',
-          'Clean and professional execution',
-          'Residential focused solutions',
-          'Reliable service you can trust',
+          'Evaluación personalizada del proyecto',
+          'Ejecución limpia y profesional',
+          'Soluciones centradas en viviendas',
+          'Servicio confiable en el que puedes confiar',
         ],
         button: {
-          label: 'Book Now!',
+          label: 'Reservar Ya!',
           href: '#',
         },
         image: 'hero-additional',
       },
       additionalService: {
-        title: 'Complete Home Improvement Services',
+        title: 'Servicios completos de mejora del hogar',
         description:
-          'Expert services designed to enhance comfort, functionality, and long-term value across every area of your home.',
+          'Servicios expertos diseñados para mejorar comodidad, funcionalidad y valor a largo plazo en tu hogar.',
         items: [
           {
-            title: 'Painting & Wall Services',
+            title: 'Pintura y servicios de muros',
             description:
-              'Professional painting and wall-related services designed to improve and protect your home.',
-            title2: 'Services:',
+              'Servicios profesionales de pintura y muros diseñados para mejorar y proteger tu hogar.',
+            title2: 'Servicios:',
             services: [
-              'Interior & Exterior Painting',
-              'Drywall Repair & Texture',
-              'Siding Installation & Repairs',
-              'Wood Repairs',
+              'Pintura interior y exterior',
+              'Reparación y texturizado de drywall',
+              'Instalación y reparación de revestimientos',
+              'Reparaciones en madera',
             ],
             image: 'additional-1',
           },
           {
-            title: 'Carpentry & Installations',
+            title: 'Carpintería e instalaciones',
             description:
-              'Installation and finishing services to enhance the functionality and appearance of interior spaces.',
-            title2: 'Services:',
+              'Instalación y acabados que mejoran la funcionalidad y apariencia interior.',
+            title2: 'Servicios:',
             services: [
-              'Doors Installation',
-              'Trim & Baseboards',
-              'Cabinets Installation',
-              'Vinyl Flooring',
+              'Instalación de puertas',
+              'Zócalos y molduras',
+              'Instalación de gabinetes',
+              'Pisos vinílicos',
             ],
             image: 'additional-2',
           },
           {
-            title: 'Outdoor & Property Services',
+            title: 'Servicios exteriores y de propiedad',
             description:
-              'Exterior and property services focused on maintenance, repairs, and outdoor improvements.',
-            title2: 'Services:',
+              'Servicios exteriores centrados en mantenimiento, reparaciones y mejoras al aire libre.',
+            title2: 'Servicios:',
             services: [
-              'Wood Fence',
-              'Deck Repair',
-              'Yard Maintenance',
-              'Rain Gutters Cleaning',
-              'Power Washer Services',
+              'Vallas de madera',
+              'Reparación de terrazas',
+              'Mantenimiento de jardines',
+              'Limpieza de canaletas',
+              'Servicios con hidrolavadora',
             ],
             image: 'additional-3',
           },
           {
-            title: 'Cleaning & Maintenance',
+            title: 'Limpieza y mantenimiento',
             description:
-              'Cleaning and maintenance services for residential and commercial properties.',
-            title2: 'Services:',
-            services: ['IParking Lot Cleaning', 'Trash Bins Cleaning Services'],
+              'Servicios de limpieza y mantenimiento para propiedades residenciales y comerciales.',
+            title2: 'Servicios:',
+            services: [
+              'Limpieza de estacionamientos',
+              'Limpieza de contenedores de basura',
+            ],
             image: 'additional-4',
           },
           {
-            title: 'Light Home Repairs',
+            title: 'Pequeñas reparaciones domésticas',
             description:
-              'Small home repair services handled efficiently and professionally.',
-            title2: 'Services:',
+              'Reparaciones pequeñas manejadas de manera eficiente y profesional.',
+            title2: 'Servicios:',
             services: [
-              'Toilet Installation',
-              'Light Plumbing',
-              'Windows Installation',
+              'Instalación de inodoros',
+              'Pequeñas reparaciones de plomería',
+              'Instalación de ventanas',
             ],
             image: 'additional-5',
           },
         ],
       },
       includes: {
-        title: 'What’s Included in Our Additional Services',
+        title: 'Qué incluyen nuestros servicios adicionales',
         image: 'includes-additional',
         items: [
           {
-            title: 'Project Evaluation',
+            title: 'Evaluación del proyecto',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Cada servicio comienza con una revisión para entender alcance, necesidades y expectativas.',
           },
           {
-            title: 'Customized Solutions',
+            title: 'Soluciones personalizadas',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Ofrecemos soluciones adaptadas a las necesidades específicas de tu proyecto.',
           },
           {
-            title: 'Professional Execution',
+            title: 'Ejecución profesional',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Mano de obra profesional que garantiza resultados confiables.',
           },
           {
-            title: 'Clean Work Area',
+            title: 'Área de trabajo limpia',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Mantenemos el espacio ordenado y protegido durante todo el proceso.',
           },
           {
-            title: 'Reliable Results',
+            title: 'Resultados confiables',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Entregamos trabajos que cumplen expectativas y perduran en el tiempo.',
           },
         ],
       },
       process: {
-        title: 'A Simple and Professional Process',
+        title: 'Un proceso simple y profesional',
         description:
-          'In just 3 easy steps, we deliver quality painting and drywall services with clean and reliable results.',
+          'En solo 3 pasos entregamos servicios de pintura y drywall con resultados limpios y confiables.',
         steps: [
           {
-            title: 'Easy Scheduling',
+            title: 'Programación sencilla',
             description:
-              'We discuss your project, answer your questions, and schedule your service at a time that works best for you.',
+              'Hablamos de tu proyecto, aclaramos dudas y agendamos el servicio en el mejor horario para ti.',
           },
           {
-            title: 'We Get to Work',
+            title: 'Manos a la obra',
             description:
-              'Our team arrives prepared and on time, completing the job with attention to detail, clean execution, and respect for your home.',
+              'Llegamos preparados y trabajamos con cuidado y respeto por tu hogar.',
           },
           {
-            title: 'Quality Results',
+            title: 'Resultados de calidad',
             description:
-              'We finish the project to your satisfaction, ensuring clean finishes, durable results, and a job done right the first time.',
+              'Entregamos acabados duraderos y un trabajo bien hecho a la primera.',
           },
         ],
       },
       improve: {
         img: 'call-additional',
-        title: 'Need Help With Your Project?',
+        title: '¿Necesitas ayuda con tu proyecto?',
         description:
-          'Schedule a free evaluation with Arcos Remodeling Home Improvement and let us help you find the right solution for your home improvement or maintenance needs across New Mexico.',
+          'Programa una evaluación gratuita con Arcos Remodeling y te ayudaremos a encontrar la mejor solución para tu proyecto de mejora o mantenimiento.',
         buttons: [
           {
-            label: 'Book Now!',
+            label: 'Reservar Ya!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
-            label: 'Call Now',
+            label: 'Llamar Ya',
             href: '#',
             icon: 'phone',
             color: 'bg-secondary',
@@ -894,40 +896,166 @@ export default {
       },
     },
   },
-  footer: {
-    description:
-      'Quality Home <br class="hidden lg:block"/> Improvements <br class="hidden md:block lg:hidden"/> You Can <br class="hidden lg:block"/> Trust ',
-    service: {
-      title: ' Services',
+  'about-us': {
+    hero: {
+      title:
+        "<span class='text-secondary'>Creado con cuidado.</span> Definido por la calidad.",
+    },
+    info: {
+      title: 'Sobre Arcos Remodeling',
+      description:
+        'Arcos Remodeling Home Improvement nació con un objetivo claro: ofrecer servicios de mejora del hogar con responsabilidad, puntualidad y respeto. Lo que empezó como un esfuerzo independiente se ha convertido en un servicio confiable enfocado en resultados limpios y precisos.',
       items: [
         {
-          title: 'Interior Painting',
+          icon: 'home',
+          title: 'Nuestra historia',
+          description:
+            'Arcos Remodeling se fundó con la meta de construir algo honesto y duradero mediante trabajo de calidad. Con el tiempo, ese compromiso impulsó el crecimiento por referencias y clientes satisfechos.',
+        },
+        {
+          icon: 'vision',
+          title: 'Nuestra visión',
+          description:
+            'Arcos Remodeling busca crecer, expandir su base de clientes y fortalecer su presencia en Nuevo México, manteniendo siempre la misma calidad y atención al detalle.',
+        },
+      ],
+    },
+    gallery: {
+      title: 'Hogares hermosos. Resultados de calidad.',
+      description:
+        'Mira nuestros últimos proyectos, transformaciones reales y trabajos terminados para propietarios en <br class="hidden sm:block"/> Nuevo México. Cada imagen refleja nuestro compromiso con la calidad y la atención al detalle.',
+      images: ['gallery-1', 'gallery-2', 'gallery-3', 'gallery-4'],
+    },
+    improve: {
+      img: 'call-about',
+      title: 'Confianza basada en la experiencia',
+      description:
+        'Nuestra experiencia se refleja en la calidad del trabajo y la satisfacción de nuestros clientes. Cada proyecto se respalda con estándares profesionales y atención al detalle.',
+      buttons: [
+        {
+          label: 'Reservar Ya!',
+          href: '#',
+          icon: 'arrow',
+          color: 'bg-white',
+        },
+        {
+          label: 'Llamar Ya',
+          href: '#',
+          icon: 'phone',
+          color: 'bg-secondary',
+        },
+      ],
+    },
+  },
+  faq: {
+    hero: {
+      title: 'Preguntas frecuentes',
+      description:
+        'Consulta nuestras preguntas frecuentes para obtener más información sobre Arcos Remodeling',
+      questions: [
+        {
+          title: '¿Realizan servicios en mi hogar?',
+          answer:
+            'Sí. Ofrecemos servicios residenciales realizados directamente en tu propiedad con cuidado y respeto.',
+        },
+        {
+          title: '¿Qué servicios ofrecen?',
+          answer:
+            'Ofrecemos pintura interior y exterior, reparación y texturizado de drywall, además de servicios adicionales según necesidad.',
+        },
+        {
+          title: '¿Cubren todo Nuevo México?',
+          answer:
+            'Sí. Brindamos servicios en varias áreas de Nuevo México; contáctanos para confirmar cobertura en tu zona.',
+        },
+        {
+          title: '¿Ofrecen presupuestos gratis?',
+          answer:
+            'Sí. Ofrecemos estimados gratuitos para evaluar tu proyecto y recomendar la mejor solución.',
+        },
+        {
+          title: '¿Cuánto tiempo suele durar un proyecto?',
+          answer:
+            'La duración depende del alcance; te daremos un estimado al evaluar el proyecto.',
+        },
+        {
+          title: '¿Necesito estar en casa durante el servicio?',
+          answer:
+            'Depende del trabajo; te informaremos si es necesario estar presente o si podemos coordinar otra opción.',
+        },
+        {
+          title: '¿Proveen los materiales?',
+          answer:
+            'Sí. Podemos proporcionar materiales; también podemos trabajar con materiales que tú suministres según lo acordado.',
+        },
+        {
+          title: '¿Cómo agendo un servicio?',
+          answer:
+            'Contacta por teléfono o reserva a través de nuestro formulario y coordinaremos la fecha y detalles.',
+        },
+        {
+          title: '¿Qué pasa si necesito reprogramar o cancelar?',
+          answer:
+            'Contáctanos lo antes posible y trabajaremos para reprogramar o ajustar según nuestras políticas.',
+        },
+      ],
+    },
+
+    improve: {
+      img: 'call-faq',
+      title: '¿Aún tienes preguntas?',
+      description:
+        'Si necesitas más información o quieres hablar sobre tu proyecto, estamos aquí para ayudarte.',
+      buttons: [
+        {
+          label: 'Reservar Ya!',
+          href: '#',
+          icon: 'arrow',
+          color: 'bg-white',
+        },
+        {
+          label: 'Llamar Ya',
+          href: '#',
+          icon: 'phone',
+          color: 'bg-secondary',
+        },
+      ],
+    },
+  },
+  footer: {
+    description:
+      'Mejoras en el hogar de calidad <br class="hidden lg:block"/> que puedes <br class="hidden md:block lg:hidden"/> confiar',
+    service: {
+      title: 'Servicios',
+      items: [
+        {
+          title: 'Pintura interior',
           href: 'interior-painting',
         },
         {
-          title: 'Exterior Painting',
+          title: 'Pintura exterior',
           href: 'exterior-painting',
         },
         {
-          title: 'Drywall Repair',
+          title: 'Reparación de drywall',
           href: 'drywall-repair',
         },
         {
-          title: 'Drywall Texture',
+          title: 'Texturizado de drywall',
           href: 'drywall-texture',
         },
       ],
     },
     schedules: {
-      title: 'Business Hours',
-      items: ['Monday - Sunday', '8:00 AM - 6:00 PM', 'Cookies Polityes'],
+      title: 'Horario de atención',
+      items: ['Lunes - Domingo', '8:00 AM - 6:00 PM', 'Política de cookies'],
     },
     contact: {
-      title: 'Contact Us',
+      title: 'Contáctanos',
       items: [
         {
           icon: 'map-1',
-          text: 'Serving New Mexico',
+          text: 'Sirviendo a Nuevo México',
           href: '#',
         },
         {

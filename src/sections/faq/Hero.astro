@@ -1,0 +1,129 @@
+---
+type Translations = typeof import('../../i18n/es').default;
+type HeroContent = Translations['faq']['hero'];
+interface Props {
+  content: HeroContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section class="flex flex-col justify-center items-center gap-14">
+  <div class="flex flex-col justify-center items-start md:items-center gap-6">
+    <h1
+      class="text-primary text-start md:text-center font-title text-[48px] font-bold leading-[117$]"
+    >
+      {content.title}
+    </h1>
+    <p
+      class="text-[#2C2C2C] text-start md:text-center text-[16px] font-normal leading-[150%]"
+    >
+      {content.description}
+    </p>
+  </div>
+  <div
+    class="w-full flex flex-col justify-center items-center gap-4 md:gap-6 includes-accordion"
+  >
+    {
+      content.questions.map((question, i) => (
+        <div class="includes-item w-full p-6 bg-back" data-index={i}>
+          <div class="flex flex-col justify-start items-start gap-4">
+            <div class="flex justify-between items-center w-full">
+              <h3 class="text-primary text-[16px] md:text-[24px] font-semibold leading-[120%]">
+                {question.title}
+              </h3>
+              <button
+                type="button"
+                class="includes-toggle w-8 h-8 flex justify-center items-center bg-secondary cursor-pointer"
+              >
+                <img
+                  src={i === 0 ? '/images/menos.svg' : '/images/mas.svg'}
+                  alt={i === 0 ? 'Cerrar' : 'Abrir'}
+                  width="14"
+                  height="2.8"
+                  class="w-3.5 h-auto"
+                />
+              </button>
+            </div>
+            <p class="max-w-[90%] includes-desc text-[#1D1D1D] text-[16px] leading-[120%] font-normal ${i === 0 ? '' : 'hidden'}">
+              {question.answer}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.includes-accordion');
+    if (!container) return;
+    const items = Array.from(container.querySelectorAll('.includes-item'));
+    if (!items.length) return;
+
+    items.forEach((el, idx) => {
+      const btn = el.querySelector(
+        '.includes-toggle'
+      ) as HTMLButtonElement | null;
+      const desc = el.querySelector('.includes-desc') as HTMLElement | null;
+      const img = btn
+        ? (btn.querySelector('img') as HTMLImageElement | null)
+        : null;
+
+      // ensure first open
+      if (idx === 0) {
+        el.classList.add('open');
+        if (desc) desc.classList.remove('hidden');
+        if (img) {
+          img.src = '/images/menos.svg';
+          img.alt = 'Cerrar';
+        }
+      } else {
+        el.classList.remove('open');
+        if (desc) desc.classList.add('hidden');
+        if (img) {
+          img.src = '/images/mas.svg';
+          img.alt = 'Abrir';
+        }
+      }
+
+      btn &&
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isOpen = el.classList.contains('open');
+          if (isOpen) {
+            el.classList.remove('open');
+            if (desc) desc.classList.add('hidden');
+            if (img) {
+              img.src = '/images/mas.svg';
+              img.alt = 'Abrir';
+            }
+          } else {
+            // close others
+            items.forEach((other) => {
+              if (other !== el) {
+                other.classList.remove('open');
+                const d = other.querySelector(
+                  '.includes-desc'
+                ) as HTMLElement | null;
+                const iimg = other.querySelector(
+                  '.includes-toggle img'
+                ) as HTMLImageElement | null;
+                if (d) d.classList.add('hidden');
+                if (iimg) {
+                  iimg.src = '/images/mas.svg';
+                  iimg.alt = 'Abrir';
+                }
+              }
+            });
+            // open clicked
+            el.classList.add('open');
+            if (desc) desc.classList.remove('hidden');
+            if (img) {
+              img.src = '/images/menos.svg';
+              img.alt = 'Cerrar';
+            }
+          }
+        });
+    });
+  });
+</script>

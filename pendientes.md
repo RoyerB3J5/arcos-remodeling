@@ -1,1 +1,6 @@
-- Preguntar sobre la altura del hero como quieren que sea
+- ChatBot
+- Imagenes de Opiniones/Reviews (4-5)
+- Formulario de Book Appointment
+- Descripcion/Texto para la seccion de lo que incluye cada servicio
+- Preguntas y respuestas FAQ
+- Contenido ShapeHub - Si es que se hará

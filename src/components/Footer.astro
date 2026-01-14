@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-import ChangeLanguage from './ChangeLanguage.astro';
 
 type Translations = typeof import('../i18n/en').default;
 type FooterContent = Translations['footer'];
@@ -21,15 +20,15 @@ const lang = match ? match[1] : 'en';
 const icons = [
   {
     icon: 'facebook',
-    href: 'https://www.facebook.com/Grooming.Monarca.spa/',
+    href: '#',
   },
   {
     icon: 'instagram',
-    href: 'https://www.instagram.com/monarca.pets.spa/',
+    href: '#',
   },
   {
     icon: 'tiktok',
-    href: 'https://www.tiktok.com/@monarcagrooming',
+    href: '#',
   },
 ];
 ---
