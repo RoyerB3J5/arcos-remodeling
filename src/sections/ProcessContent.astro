@@ -23,7 +23,11 @@ const { content } = Astro.props as Props;
   >
     {
       content.steps.map((step, index) => (
-        <div class="w-full flex flex-col justify-center items-center min-h-0 max-w-102.75">
+        <div
+          class="w-full flex flex-col justify-center items-center min-h-0 max-w-102.75"
+          data-aos="fade-up"
+          data-aos-delay={index * 300}
+        >
           <div class="flex flex-col justify-start items-start gap-6 pt-14.5 pb-10 px-8.5 md:px-10 bg-back relative flex-1">
             <div class="absolute top-0 right-0 flex justify-center items-center">
               <div class="w-14.75 h-4.5 bg-primary" />

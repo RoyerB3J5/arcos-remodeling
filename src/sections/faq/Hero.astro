@@ -22,6 +22,7 @@ const { content } = Astro.props as Props;
   </div>
   <div
     class="w-full flex flex-col justify-center items-center gap-4 md:gap-6 includes-accordion"
+    data-aos="flip-down"
   >
     {
       content.questions.map((question, i) => (

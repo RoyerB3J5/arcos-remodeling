@@ -7,9 +7,9 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 
-<section class="w-full h-auto flex justify-center items-center bg-back py-8 md:py-16">
+<section class="w-full h-auto flex justify-center items-center bg-back py-8 md:py-16" >
   <div
-    class="w-full max-w-screen md:max-w-265.5 flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start px-5 xl:px-0 gap-10 sm:gap-0"
+    class="w-full max-w-screen md:max-w-265.5 flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start px-5 xl:px-0 gap-10 sm:gap-0" data-aos="zoom-in"
   >
     {
       content.map((item) => (

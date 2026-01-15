@@ -8,7 +8,7 @@ const { content } = Astro.props as Props;
 ---
 
 <div class="w-full flex flex-col md:flex-row justify-center items-center md:items-end gap-10 md:gap-6">
-  <div class="w-full md:w-[50%] min-w-0 flex flex-col justify-center items-start gap-4 md:gap-8">
+  <div class="w-full md:w-[50%] min-w-0 flex flex-col justify-center items-start gap-4 md:gap-8" data-aos="zoom-in-right">
     <h2 class="text-primary font-title text-[32px] md:text-[48px] font-bold leading-[125%] md:leading-[117%]">
       {content.title}
     </h2>
@@ -53,6 +53,7 @@ const { content } = Astro.props as Props;
     class="w-full md:w-[50%] min-w-0 max-w-full h-auto"
     decoding="async"
     loading="lazy"
+    data-aos="zoom-in-left"
   />
 </div>
 

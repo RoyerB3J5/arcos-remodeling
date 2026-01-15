@@ -23,8 +23,11 @@ const { content } = Astro.props as Props;
   </div>
   <div class="w-full flex flex-col justify-center items-center gap-10 md:gap-6">
     {
-      content.items.map((item) => (
-        <div class="flex flex-col md:flex-row justify-center items-stretch">
+      content.items.map((item, index) => (
+        <div
+          class="flex flex-col md:flex-row justify-center items-stretch"
+          data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+        >
           <div class="w-full md:w-[50%] self-stretch flex flex-col justify-center items-start px-4.5 xl:px-7 gap-6 md:gap-3 lg:gap-4  order-2 md:order-1 py-10 sm:py-8 md:py-3 lg:py-0 bg-back">
             <h3 class="text-primary font-bold text-[32px] sm:text-[24px] lg:text-[48px] font-title leading-[116%]">
               {item.title}

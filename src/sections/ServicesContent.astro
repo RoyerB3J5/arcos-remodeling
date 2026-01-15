@@ -29,8 +29,11 @@ const lang = match ? match[1] : 'en';
       class="w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-6 max-w-150 md:max-w-none"
     >
       {
-        content.items.map((item) => (
-          <div class="flex flex-col justify-center items-center w-full h-full">
+        content.items.map((item, index) => (
+          <div
+            class="flex flex-col justify-center items-center w-full h-full"
+            data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+          >
             <img
               src={`/images/${item.image}.webp`}
               alt={item.title}

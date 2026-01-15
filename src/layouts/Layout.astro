@@ -2,7 +2,6 @@
 // Imports optimizados - solo lo esencial al inicio
 import '../styles/global.css';
 import 'aos/dist/aos.css';
-
 import Chatbot from '../components/Chatbot.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -58,7 +57,10 @@ const { lang, t } = Astro.props;
     <link rel="canonical" href="https://arcosremodeling.com/" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Arcos Remodeling - Quality home improvements you can trust" />
+    <meta
+      property="og:title"
+      content="Arcos Remodeling - Quality home improvements you can trust"
+    />
     <meta
       property="og:description"
       content="Arcos Remodeling provides top-quality home improvement services, ensuring your home looks its best."
@@ -69,7 +71,10 @@ const { lang, t } = Astro.props;
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ArcosRemodeling" />
-    <meta name="twitter:title" content="Arcos Remodeling - Quality home improvements you can trust" />
+    <meta
+      name="twitter:title"
+      content="Arcos Remodeling - Quality home improvements you can trust"
+    />
     <meta
       name="twitter:description"
       content="Arcos Remodeling provides top-quality home improvement services, ensuring your home looks its best."
@@ -143,6 +148,7 @@ const { lang, t } = Astro.props;
     </script>
   </body>
 </html>
+
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
     // Observe the visible wrapper elements (form-container) because iframes may be display:none

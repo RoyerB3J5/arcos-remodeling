@@ -7,11 +7,12 @@ interface Props {
 }
 const { content } = Astro.props as Props;
 ---
+
 <section
-  class="flex flex-col sm:flex-row justify-center items-center w-full h-screen sm:h-auto lg:h-screen aspect-auto sm:aspect-1440/900 lg:aspect-auto max-h-screen overflow-hidden relative"
+  class="flex flex-col sm:flex-row justify-center items-center w-full h-screen sm:h-auto lg:h-screen aspect-auto sm:aspect-1440/900 lg:aspect-auto max-h-screen overflow-hidden relative "
 >
   <div
-    class="flex-1 min-w-0 h-auto sm:h-full bg-primary w-full sm:w-1/2 lg:w-full self-stretch order-2 sm:order-1 py-8 px-5 flex justify-center items-center"
+    class="flex-1 min-w-0 h-auto sm:h-full bg-primary w-full sm:w-1/2 lg:w-full self-stretch order-2 sm:order-1 py-8 px-5 flex justify-center items-center relative z-0 fade-down active"
   >
     <div
       class="flex sm:hidden flex-col justify-center items-start gap-8 w-full"
@@ -44,7 +45,7 @@ const { content } = Astro.props as Props;
     </div>
   </div>
   <div
-    class="relative overflow-hidden w-full sm:w-1/2 lg:w-auto h-auto sm:h-full lg:h-screen aspect-720/900 order-1 sm:order-2"
+    class="relative overflow-hidden w-full sm:w-1/2 lg:w-auto h-auto sm:h-full lg:h-screen aspect-720/900 order-1 sm:order-2 fade-up active"
   >
     <img
       src="/images/main.webp"
@@ -55,7 +56,7 @@ const { content } = Astro.props as Props;
     />
   </div>
   <div
-    class="w-full max-w-screen md:max-w-7xl sm:flex justify-start items-center px-5 xl:px-0 absolute hidden"
+    class="w-full max-w-screen md:max-w-7xl sm:flex justify-start items-center px-5 xl:px-0 absolute hidden z-20 fade-down-2 active"
   >
     <div
       class="flex flex-col justify-center items-start gap-8 xl:gap-16 max-w-1/2 translate-y-8 lg:translate-y-0"
