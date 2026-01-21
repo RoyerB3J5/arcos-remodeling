@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const icons = [
+  {
+    name: 'tiktok',
+    href: '',
+  },
+  {
+    name: 'instagram',
+    href: '',
+  },
+  {
+    name: 'facebook',
+    href: '',
+  },
+];
+---
+
+<div class="flex justify-center items-center gap-3.5 w-full">
+  {
+    icons.map((i) => (
+      <a
+        href={i.href}
+        class="p-2 rounded-full flex items-center justify-center bg-primary shrink-0"
+      >
+        <Icon name={i.name} class={'w-4 h-4  text-white'} />
+      </a>
+    ))
+  }
+</div>
