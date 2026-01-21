@@ -963,42 +963,42 @@ export default {
         {
           title: 'What services do you offer?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'We specialize in interior painting, exterior painting, drywall repair, and drywall texture services. Additional home improvement work may be available depending on the project.',
         },
         {
           title: 'Do you serve all of New Mexico?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'We serve residential clients across New Mexico. If you are unsure whether your area is covered, feel free to contact us directly.',
         },
         {
           title: 'Do you offer free estimates?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'Yes. We provide free estimates. Each project is evaluated individually to ensure accurate pricing based on scope and requirements.',
         },
         {
           title: 'How long does a project usually take?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'Project timelines vary depending on the size and type of work. We will provide an estimated timeframe once we review your project details.',
         },
         {
           title: 'Do I need to be home during the service?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'Not necessarily. Access requirements are discussed during scheduling to ensure the work can be completed smoothly and securely.',
         },
         {
           title: 'Do you provide the materials?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'Material details depend on the project and will be discussed during the estimate. This allows flexibility based on client preferences and project needs.',
         },
         {
           title: 'How do I schedule a service?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'You can request a free estimate through our website or contact us directly by phone or text to schedule your project.',
         },
         {
           title: 'What if I need to reschedule or cancel?',
           answer:
-            'Yes. We provide residential home improvement services directly at your property. Our work is performed on-site with care, organization, and respect for your home.',
+            'We understand plans can change. Please notify us as soon as possible so we can adjust the schedule accordingly.',
         },
       ],
     },

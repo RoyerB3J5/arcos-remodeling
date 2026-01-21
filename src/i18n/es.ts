@@ -954,49 +954,49 @@ export default {
         'Consulta nuestras preguntas frecuentes para obtener más información sobre Arcos Remodeling',
       questions: [
         {
-          title: '¿Realizan servicios en mi hogar?',
+          title: '¿Ofrecen servicios en mi hogar?',
           answer:
-            'Sí. Ofrecemos servicios residenciales realizados directamente en tu propiedad con cuidado y respeto.',
+            'Sí. Ofrecemos servicios residenciales de mejora del hogar directamente en tu propiedad. Nuestro trabajo se realiza en el lugar con cuidado, organización y respeto por tu hogar.',
         },
         {
           title: '¿Qué servicios ofrecen?',
           answer:
-            'Ofrecemos pintura interior y exterior, reparación y texturizado de drywall, además de servicios adicionales según necesidad.',
+            'Nos especializamos en pintura interior, pintura exterior, reparación de drywall y texturizado de drywall. Otros trabajos de mejora del hogar pueden estar disponibles según el proyecto.',
         },
         {
-          title: '¿Cubren todo Nuevo México?',
+          title: '¿Atienden todo Nuevo México?',
           answer:
-            'Sí. Brindamos servicios en varias áreas de Nuevo México; contáctanos para confirmar cobertura en tu zona.',
+            'Atendemos a clientes residenciales en todo Nuevo México. Si no estás seguro de si cubrimos tu área, contáctanos directamente.',
         },
         {
-          title: '¿Ofrecen presupuestos gratis?',
+          title: '¿Ofrecen presupuestos gratuitos?',
           answer:
-            'Sí. Ofrecemos estimados gratuitos para evaluar tu proyecto y recomendar la mejor solución.',
+            'Sí. Ofrecemos presupuestos gratuitos. Cada proyecto se evalúa de forma individual para asegurar un precio preciso según el alcance y los requisitos.',
         },
         {
-          title: '¿Cuánto tiempo suele durar un proyecto?',
+          title: '¿Cuánto suele tardar un proyecto?',
           answer:
-            'La duración depende del alcance; te daremos un estimado al evaluar el proyecto.',
+            'Los plazos varían según el tamaño y tipo de trabajo. Proporcionaremos un plazo estimado una vez revisemos los detalles de tu proyecto.',
         },
         {
           title: '¿Necesito estar en casa durante el servicio?',
           answer:
-            'Depende del trabajo; te informaremos si es necesario estar presente o si podemos coordinar otra opción.',
+            'No necesariamente. Los requisitos de acceso se discuten al programar para asegurar que el trabajo se complete de forma fluida y segura.',
         },
         {
           title: '¿Proveen los materiales?',
           answer:
-            'Sí. Podemos proporcionar materiales; también podemos trabajar con materiales que tú suministres según lo acordado.',
+            'Los detalles de los materiales dependen del proyecto y se tratarán durante el presupuesto. Esto permite flexibilidad según las preferencias del cliente y las necesidades del proyecto.',
         },
         {
-          title: '¿Cómo agendo un servicio?',
+          title: '¿Cómo programo un servicio?',
           answer:
-            'Contacta por teléfono o reserva a través de nuestro formulario y coordinaremos la fecha y detalles.',
+            'Puedes solicitar un presupuesto gratuito a través de nuestro sitio web o contactarnos por teléfono o mensaje de texto para programar tu proyecto.',
         },
         {
           title: '¿Qué pasa si necesito reprogramar o cancelar?',
           answer:
-            'Contáctanos lo antes posible y trabajaremos para reprogramar o ajustar según nuestras políticas.',
+            'Entendemos que los planes pueden cambiar. Por favor avísanos lo antes posible para que podamos ajustar el cronograma en consecuencia.',
         },
       ],
     },
