@@ -45,7 +45,7 @@ export default {
       },
       {
         label: 'Call Now',
-        href: '#',
+        href: 'tel:+15052079968',
         icon: 'phone',
         background: 'bg-primary',
       },
@@ -66,7 +66,7 @@ export default {
         {
           icon: 'phone',
           label: 'Call Now',
-          href: '#',
+          href: 'tel:+15052079968',
           color: 'bg-secondary',
         },
       ],
@@ -208,7 +208,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -229,7 +229,7 @@ export default {
   book: {
     title: 'Request Your Free <br/> Estimate in Minutes',
     description:
-      'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, <br class="hidden sm:block"/> call or text <a href="tel:+15052270276">(505) 227-0276</a> and we’ll help coordinate your project.',
+      'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, <br class="hidden sm:block"/> call or text <a href="tel:+15052079968">+1 (505) 207-9968</a> and we’ll help coordinate your project.',
   },
   servicesPage: {
     services: {
@@ -305,7 +305,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -355,24 +355,24 @@ export default {
               'Light surface preparation to ensure proper paint adhesion and clean, even finishes.',
           },
           {
-            title: 'Professional Patching',
+            title: 'Professional Paint Application',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Careful and precise paint application using quality tools for smooth, consistent results.',
           },
           {
             title: 'Minor Wall Touch-Ups',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Basic touch-ups on small imperfections such as nail holes or light surface flaws.',
           },
           {
             title: 'Area Protection',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Floors, furniture, and surrounding areas are protected to keep your home clean and organized.',
           },
           {
             title: 'Clean Finish',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Clean lines, smooth coverage, and a neat final result ready to enjoy.',
           },
         ],
       },
@@ -412,7 +412,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -463,22 +463,22 @@ export default {
           {
             title: 'Professional Paint Application',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Careful paint application using professional tools for even coverage and durable results.',
           },
           {
             title: 'Minor Surface Touch-Ups',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Light touch-ups on small imperfections to improve overall appearance.',
           },
           {
             title: 'Property Protection',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Surrounding areas are protected to keep landscaping and exterior features clean.',
           },
           {
             title: 'Clean Final Finish',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Neat, uniform finishes completed with attention to detail.',
           },
         ],
       },
@@ -518,7 +518,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -569,22 +569,22 @@ export default {
           {
             title: 'Professional Patching',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Careful patching of holes, cracks, and minor surface damage for a smooth result.',
           },
           {
             title: 'Seamless Blending',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Repairs are blended to match existing walls and ceilings as closely as possible.',
           },
           {
             title: 'Clean Work Area',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Work areas are kept organized and clean throughout the repair process.',
           },
           {
             title: 'Paint-Ready Finish',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Surfaces are left smooth and ready for painting or final finishes.',
           },
         ],
       },
@@ -624,7 +624,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -675,22 +675,22 @@ export default {
           {
             title: 'Surface Preparation',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
-          },
-          {
-            title: 'Texture Blending',
-            description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Light surface preparation to ensure proper texture adhesion and consistency.',
           },
           {
             title: 'Texture Application',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Professional application of drywall texture for an even and uniform finish.',
+          },
+          {
+            title: 'Texture Blending',
+            description:
+              'Blending new texture with existing surfaces for a seamless appearance.',
           },
           {
             title: 'Clean Finish',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Clean, consistent texture left ready for painting or final finishes.',
           },
         ],
       },
@@ -730,7 +730,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -835,22 +835,22 @@ export default {
           {
             title: 'Customized Solutions',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Services are adjusted based on the specific requirements of your home and the type of work needed.',
           },
           {
             title: 'Professional Execution',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Work is performed with attention to detail, using proven methods and proper tools.',
           },
           {
             title: 'Clean Work Area',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'We maintain organized and clean work areas throughout the project.',
           },
           {
             title: 'Reliable Results',
             description:
-              'Each service begins with a review of your project to understand scope, needs, and expectations.',
+              'Every service is completed with a focus on quality, functionality, and customer satisfaction.',
           },
         ],
       },
@@ -890,7 +890,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -942,7 +942,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1017,7 +1017,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1071,8 +1071,8 @@ export default {
         },
         {
           icon: 'phone-1',
-          text: '(505) 227-0276',
-          href: 'tel:+15052270276',
+          text: '+1 (505) 207-9968',
+          href: 'tel:+15052079968',
         },
       ],
     },

@@ -41,7 +41,7 @@ export default {
       },
       {
         label: 'Llamar Ya',
-        href: '#',
+        href: 'tel:+15052079968',
         icon: 'phone',
         background: 'bg-primary',
       },
@@ -62,7 +62,7 @@ export default {
         {
           icon: 'phone',
           label: 'Llamar Ya',
-          href: '#',
+          href: 'tel:+15052079968',
           color: 'bg-secondary',
         },
       ],
@@ -204,7 +204,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -225,7 +225,7 @@ export default {
   book: {
     title: 'Solicita tu presupuesto gratis <br/> en minutos',
     description:
-      'Gracias por elegir Arcos Remodeling Home Improvement. Si estos horarios no funcionan, <br class="hidden sm:block"/> llama o envía un mensaje al <a href="tel:+15052270276">(505) 227-0276</a> y te ayudaremos a coordinar tu proyecto.',
+      'Gracias por elegir Arcos Remodeling Home Improvement. Si estos horarios no funcionan, <br class="hidden sm:block"/> llama o envía un mensaje al <a href="tel:+15052079968">+1 (505) 207-9968</a> y te ayudaremos a coordinar tu proyecto.',
   },
   servicesPage: {
     services: {
@@ -301,7 +301,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -342,33 +342,33 @@ export default {
         ],
       },
       includes: {
-        title: 'Qué incluye nuestro servicio de pintura interior',
+        title: 'What’s Included in Our Interior Painting Service',
         image: 'includes-interior-painting',
         items: [
           {
             title: 'Preparación de superficies',
             description:
-              'Preparación ligera de superficies para asegurar la adhesión de la pintura y acabados uniformes.',
+              'Preparación ligera de superficies para asegurar la adhesión de la pintura y acabados limpios y uniformes.',
           },
           {
-            title: 'Parcheo profesional',
+            title: 'Aplicación profesional de pintura',
             description:
-              'Revisión inicial del proyecto y parches profesionales según sea necesario.',
+              'Aplicación cuidadosa y precisa con herramientas de calidad para resultados suaves y uniformes.',
           },
           {
             title: 'Pequeños retoques en muros',
             description:
-              'Retoques menores para dejar superficies listas para pintar.',
+              'Retoques básicos en pequeñas imperfecciones como orificios de clavos o leves defectos en la superficie.',
           },
           {
-            title: 'Protección de áreas',
+            title: 'Protección del área',
             description:
-              'Protegemos muebles y pisos para mantener el espacio limpio durante el trabajo.',
+              'Se protegen suelos, muebles y áreas circundantes para mantener tu hogar limpio y ordenado.',
           },
           {
             title: 'Acabado limpio',
             description:
-              'Terminamos con acabados pulcros y listos para disfrutar.',
+              'Líneas nítidas, cobertura uniforme y un resultado final ordenado listo para disfrutar.',
           },
         ],
       },
@@ -408,7 +408,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -448,32 +448,33 @@ export default {
         ],
       },
       includes: {
-        title: 'Qué incluye nuestro servicio de pintura exterior',
+        title: 'What’s Included in Our Exterior Painting Service',
         image: 'includes-exterior-painting',
         items: [
           {
             title: 'Preparación de superficies',
             description:
-              'Preparación básica para asegurar una adhesión correcta y acabados exteriores consistentes.',
+              'Preparación básica de superficies para favorecer la adhesión de la pintura y acabados exteriores consistentes.',
           },
           {
             title: 'Aplicación profesional de pintura',
             description:
-              'Aplicamos recubrimientos con técnicas profesionales para garantizar durabilidad.',
+              'Aplicación cuidadosa con herramientas profesionales para cobertura pareja y resultados duraderos.',
           },
           {
-            title: 'Retoques menores',
+            title: 'Pequeños retoques en superficies',
             description:
-              'Retoques y correcciones para lograr un acabado uniforme.',
+              'Retoques ligeros en pequeñas imperfecciones para mejorar la apariencia general.',
           },
           {
             title: 'Protección de la propiedad',
             description:
-              'Cubrimos y protegemos áreas para minimizar cualquier impacto en tu propiedad.',
+              'Se protege el entorno para mantener jardines y elementos exteriores limpios.',
           },
           {
             title: 'Acabado final limpio',
-            description: 'Terminamos con un acabado estético y duradero.',
+            description:
+              'Acabados limpios y uniformes completados con atención al detalle.',
           },
         ],
       },
@@ -513,7 +514,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -553,33 +554,33 @@ export default {
         ],
       },
       includes: {
-        title: 'Qué incluye nuestro servicio de reparación de drywall',
+        title: 'What’s Included in Our Drywall Repair Service',
         image: 'includes-drywall-repair',
         items: [
           {
             title: 'Evaluación de daños',
             description:
-              'Evaluamos las zonas dañadas para determinar la mejor solución de reparación.',
+              'Evaluación de las zonas dañadas para determinar el método de reparación adecuado.',
           },
           {
             title: 'Parcheo profesional',
             description:
-              'Aplicamos parches y acabados que integran la reparación con la superficie existente.',
+              'Parcheo cuidadoso de agujeros, grietas y daños leves para un resultado liso.',
           },
           {
-            title: 'Mezcla y acabado',
+            title: 'Integración sin costuras',
             description:
-              'Realizamos los acabados necesarios para que la superficie quede lista para pintar.',
+              'Las reparaciones se integran para coincidir con paredes y techos existentes lo más posible.',
           },
           {
             title: 'Área de trabajo limpia',
             description:
-              'Mantenemos el área ordenada y protegida durante el trabajo.',
+              'Las áreas de trabajo se mantienen organizadas y limpias durante todo el proceso de reparación.',
           },
           {
             title: 'Acabado listo para pintar',
             description:
-              'Entregamos superficies preparadas para la pintura final.',
+              'Las superficies quedan lisas y listas para pintar o aplicar acabados finales.',
           },
         ],
       },
@@ -619,7 +620,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -659,33 +660,33 @@ export default {
         ],
       },
       includes: {
-        title: 'Qué incluye nuestro servicio de texturizado',
+        title: 'What’s Included in Our Drywall Texture Service',
         image: 'includes-drywall-texture',
         items: [
           {
             title: 'Evaluación de textura',
             description:
-              'Revisamos la textura existente para determinar la mejor forma de igualarla.',
+              'Revisión de la textura existente en paredes o techos para determinar la mejor forma de igualarla.',
           },
           {
             title: 'Preparación de superficies',
             description:
-              'Preparación adecuada para asegurar un acabado uniforme.',
-          },
-          {
-            title: 'Mezcla de texturas',
-            description:
-              'Aplicamos técnicas para integrar la nueva textura con la existente.',
+              'Preparación ligera de superficies para asegurar la adhesión y consistencia de la textura.',
           },
           {
             title: 'Aplicación de textura',
             description:
-              'Aplicación profesional para lograr un resultado consistente.',
+              'Aplicación profesional de la textura para un acabado parejo y uniforme.',
+          },
+          {
+            title: 'Mezclado de textura',
+            description:
+              'Mezclado de la nueva textura con las superficies existentes para una apariencia sin costuras.',
           },
           {
             title: 'Acabado limpio',
             description:
-              'Terminamos con un acabado estético y listo para pintar.',
+              'Textura limpia y consistente lista para pintar o aplicar acabados finales.',
           },
         ],
       },
@@ -725,7 +726,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -822,33 +823,33 @@ export default {
         ],
       },
       includes: {
-        title: 'Qué incluyen nuestros servicios adicionales',
+        title: 'What’s Included in Our Additional Services',
         image: 'includes-additional',
         items: [
           {
             title: 'Evaluación del proyecto',
             description:
-              'Cada servicio comienza con una revisión para entender alcance, necesidades y expectativas.',
+              'Cada servicio inicia con una revisión de tu proyecto para entender alcance, necesidades y expectativas.',
           },
           {
             title: 'Soluciones personalizadas',
             description:
-              'Ofrecemos soluciones adaptadas a las necesidades específicas de tu proyecto.',
+              'Los servicios se ajustan según los requisitos específicos de tu hogar y el tipo de trabajo necesario.',
           },
           {
             title: 'Ejecución profesional',
             description:
-              'Mano de obra profesional que garantiza resultados confiables.',
+              'El trabajo se realiza con atención al detalle, empleando métodos probados y herramientas adecuadas.',
           },
           {
             title: 'Área de trabajo limpia',
             description:
-              'Mantenemos el espacio ordenado y protegido durante todo el proceso.',
+              'Mantenemos áreas de trabajo organizadas y limpias durante todo el proyecto.',
           },
           {
-            title: 'Resultados confiables',
+            title: 'Resultados fiables',
             description:
-              'Entregamos trabajos que cumplen expectativas y perduran en el tiempo.',
+              'Cada servicio se completa con enfoque en calidad, funcionalidad y satisfacción del cliente.',
           },
         ],
       },
@@ -888,7 +889,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: '#',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -940,7 +941,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1015,7 +1016,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: '#',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1065,8 +1066,8 @@ export default {
         },
         {
           icon: 'phone-1',
-          text: '(505) 227-0276',
-          href: 'tel:+15052270276',
+          text: '+1 (505) 207-9968',
+          href: 'tel:+15052079968',
         },
       ],
     },
