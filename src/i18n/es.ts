@@ -6,11 +6,11 @@ export default {
         href: '/services',
       },
       {
-        label: 'Sobre nosotros',
+        label: 'Nosotros',
         href: '/about-us',
       },
       {
-        label: 'Preguntas frecuentes',
+        label: 'Preguntas',
         href: '/faq',
       },
     ],
@@ -34,13 +34,13 @@ export default {
     ],
     buttons: [
       {
-        label: 'Reservar Ya!',
+        label: 'Reservar!',
         href: '#',
         icon: 'arrow',
         background: 'bg-white',
       },
       {
-        label: 'Llamar Ya',
+        label: 'Llamar!',
         href: 'tel:+15052079968',
         icon: 'phone',
         background: 'bg-primary',
@@ -61,7 +61,7 @@ export default {
         },
         {
           icon: 'phone',
-          label: 'Llamar Ya',
+          label: 'Llamar!',
           href: 'tel:+15052079968',
           color: 'bg-secondary',
         },
@@ -342,7 +342,7 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Interior Painting Service',
+        title: '¿Qué incluye nuestro servicio de pintura interior?',
         image: 'includes-interior-painting',
         items: [
           {
@@ -448,7 +448,7 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Exterior Painting Service',
+        title: '¿Qué incluye nuestro servicio de pintura exterior?',
         image: 'includes-exterior-painting',
         items: [
           {
@@ -554,7 +554,7 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Drywall Repair Service',
+        title: '¿Qué incluye nuestro servicio de reparación de drywall?',
         image: 'includes-drywall-repair',
         items: [
           {
@@ -660,7 +660,7 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Drywall Texture Service',
+        title: '¿Qué incluye nuestro servicio de texturizado de drywall?',
         image: 'includes-drywall-texture',
         items: [
           {
@@ -823,7 +823,7 @@ export default {
         ],
       },
       includes: {
-        title: 'What’s Included in Our Additional Services',
+        title: '¿Qué incluye nuestros servicios adicionales?',
         image: 'includes-additional',
         items: [
           {
@@ -1025,7 +1025,7 @@ export default {
   },
   footer: {
     description:
-      'Mejoras en el hogar de calidad <br class="hidden lg:block"/> que puedes <br class="hidden md:block lg:hidden"/> confiar',
+      'Mejoras en el hogar <br class="hidden lg:block"/> de calidad  que puedes <br class="hidden md:block lg:hidden"/> confiar',
     service: {
       title: 'Servicios',
       items: [
