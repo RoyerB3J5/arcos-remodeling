@@ -3,6 +3,7 @@ import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
 import Improve from '../../../sections/main/Improve.astro';
+import RequestContent from '../../../sections/main/RequestContent.astro';
 import ProcessContent from '../../../sections/ProcessContent.astro';
 import Additional from '../../../sections/services/Additional.astro';
 import Hero from '../../../sections/services/Hero.astro';
@@ -45,6 +46,7 @@ const serviceData = t.services[service as keyof typeof t.services];
       )
     }
     <Includes content={serviceData.includes} />
+    <RequestContent content={t.main.request} />
     <div
       class="w-full flex flex-col justify-center items-center gap-10 md:gap-14"
     >

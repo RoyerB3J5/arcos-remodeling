@@ -4,6 +4,7 @@ import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
 import ServicesContent from '../../../sections/ServicesContent.astro';
 import Improve from '../../../sections/main/Improve.astro';
+import RequestContent from '../../../sections/main/RequestContent.astro';
 import type { Language } from '../../../types/language.type';
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
@@ -23,6 +24,7 @@ const t = translations[lang];
     <div class="w-full flex flex-col justify-center items-center gap-14">
       <ServicesContent content={t.servicesPage.services} />
     </div>
+    <RequestContent content={t.main.request} />
     <Improve content={t.servicesPage.improve} />
   </section>
 </Layout>

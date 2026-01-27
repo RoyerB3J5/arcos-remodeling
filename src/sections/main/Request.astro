@@ -1,0 +1,17 @@
+---
+import FormService from '../../components/FormService.astro';
+import RequestContent from './RequestContent.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type RequestContent = Translations['main']['request'];
+interface Props {
+  content: RequestContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex justify-center items-center gap-10 md:gap-16 pt-14 lg:pt-30 flex-col md:flex-row"
+>
+  <RequestContent content={content} />
+</section>

@@ -7,6 +7,7 @@ import Information from '../../../sections/about-us/Information.astro';
 import Improve from '../../../sections/main/Improve.astro';
 import Gallery from '../../../sections/main/Gallery.astro';
 import type { Language } from '../../../types/language.type';
+import Request from '../../../sections/main/Request.astro';
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
 }
@@ -22,6 +23,7 @@ const t = translations[lang];
   <Hero content={t['about-us'].hero} />
   <Information content={t['about-us'].info} />
   <Gallery content={t['about-us'].gallery} />
+  <Request content={t.main.request}  />
   <section class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 pb-14 md:pb-30">
     <Improve content={t['about-us'].improve} />
   </section>

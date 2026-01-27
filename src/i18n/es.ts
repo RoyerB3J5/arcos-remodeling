@@ -41,7 +41,7 @@ export default {
       },
       {
         label: 'Llamar!',
-        href: 'tel:+15052079968',
+        href: 'tel:+15052270276',
         icon: 'phone',
         background: 'bg-primary',
       },
@@ -62,7 +62,7 @@ export default {
         {
           icon: 'phone',
           label: 'Llamar!',
-          href: 'tel:+15052079968',
+          href: 'tel:+15052270276',
           color: 'bg-secondary',
         },
       ],
@@ -149,6 +149,11 @@ export default {
         },
       },
     },
+    request: {
+      title: 'Solicita tu presupuesto gratis en minutos',
+      description:
+        'Gracias por elegir Arcos Remodeling Home Improvement. Si estos horarios no funcionan, llama o envía mensaje al <a href="tel:+15052270276">(505) 227-0276</a> y te ayudaremos a coordinar tu proyecto.',
+    },
     why: {
       title: 'Por qué elegir a <br class="hidden sm:block"/> Arcos Remodeling',
       description:
@@ -204,7 +209,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052079968',
+          href: 'tel:+15052270276',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -301,7 +306,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052079968',
+          href: 'tel:+15052270276',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -408,7 +413,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052079968',
+            href: 'tel:+15052270276',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -514,7 +519,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052079968',
+            href: 'tel:+15052270276',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -620,7 +625,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052079968',
+            href: 'tel:+15052270276',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -726,7 +731,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052079968',
+            href: 'tel:+15052270276',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -889,7 +894,7 @@ export default {
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052079968',
+            href: 'tel:+15052270276',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -941,7 +946,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052079968',
+          href: 'tel:+15052270276',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1016,7 +1021,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052079968',
+          href: 'tel:+15052270276',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1066,8 +1071,8 @@ export default {
         },
         {
           icon: 'phone-1',
-          text: '+1 (505) 207-9968',
-          href: 'tel:+15052079968',
+          text: '+1 (505) 227-0276',
+          href: 'tel:+15052270276',
         },
       ],
     },

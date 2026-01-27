@@ -1,0 +1,36 @@
+---
+import FormService from '../../components/FormService.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type RequestContent = Translations['main']['request'];
+interface Props {
+  content: RequestContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<>
+  <div class="flex flex-col justify-center items-start gap-6 w-full md:w-[40%]">
+    <h2
+      class="text-primary font-title text-[32px] md:text-[48px] font-bold leading-[125%] md:leading-[116.67%]"
+    >
+      {content.title}
+    </h2>
+    <p
+      set:html={content.description}
+      class="text-paragraph text-[16px] font-normal leading-[150%]"
+    />
+    <img
+      src="/images/request.webp"
+      alt=" Imagen de formulario de Arcos Remodeling"
+      width="800"
+      height="445"
+      class="w-full h-auto"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <div class="w-full md:w-[60%] overflow-hidden">
+    <FormService />
+  </div>
+</>

@@ -7,27 +7,30 @@ interface Props {
 const { content } = Astro.props as Props;
 ---
 
-<section class="w-full h-auto flex justify-center items-center bg-back py-8 md:py-16" >
+<section
+  class="w-full h-auto flex justify-center items-center bg-back py-8 md:py-16"
+>
   <div
-    class="w-full max-w-screen md:max-w-265.5 flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start px-5 xl:px-0 gap-10 sm:gap-0" data-aos="zoom-in"
+    class="w-full max-w-screen md:max-w-265.5 flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start px-5 xl:px-0 gap-10 sm:gap-0"
+    data-aos="zoom-in"
   >
     {
       content.map((item) => (
-        <div class="flex flex-row sm:flex-col justify-center items-start sm:items-center gap-6.5 sm:gap-8 max-w-none sm:max-w-55.75">
+        <div class="flex flex-row sm:flex-col justify-center items-start sm:items-center gap-6.5 sm:gap-4 max-w-none sm:max-w-60">
           <img
             src={`/images/${item.icon}.svg`}
             alt={item.title}
             height="69"
             width="69"
-            class="w-12 sm:w-17.25 h-12 sm:h-17.25"
+            class="w-12 h-12"
             decoding="async"
             loading="lazy"
           />
           <div class="flex flex-col justify-center items-start sm:items-center gap-4">
-            <h3 class="text-[32px] font-title leading-[125%] font-bold text-primary">
+            <h3 class="text-[24px] md:text-[32px] font-title leading-[125%] font-bold text-primary">
               {item.title}
             </h3>
-            <p class="text-[24px] tracking-[2px] font-medium leading-[117%] text-paragraph text-start sm:text-center">
+            <p class="text-[18px] md:text-[24px] tracking-[2px] font-medium leading-[155%] md:leading-[117%] text-paragraph text-start sm:text-center">
               {item.subtitle}
             </p>
             <p class="text-[16px] font-normal leading-[150%] text-paragraph text-start sm:text-center">
