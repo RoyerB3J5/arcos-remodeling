@@ -9,7 +9,8 @@ const { content } = Astro.props as Props;
 ---
 
 <section
-  class="flex flex-col sm:flex-row justify-center items-center w-full h-screen sm:h-auto lg:h-screen aspect-auto sm:aspect-1440/900 lg:aspect-auto max-h-screen overflow-hidden relative "
+  class="flex flex-col sm:flex-row justify-center items-center w-full sm:h-auto lg:h-screen aspect-auto sm:aspect-1440/900 lg:aspect-auto overflow-hidden relative"
+  style="height: calc(var(--vh, 1vh) * 100);"
 >
   <div
     class="flex-1 min-w-0 h-auto sm:h-full bg-primary w-full sm:w-1/2 lg:w-full self-stretch order-2 sm:order-1 py-8 px-5 flex justify-center items-center relative z-0 fade-down active"
@@ -89,3 +90,17 @@ const { content } = Astro.props as Props;
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    function setVh() {
+      document.documentElement.style.setProperty(
+        '--vh',
+        window.innerHeight * 0.01 + 'px'
+      );
+    }
+    setVh();
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
+  })();
+</script>
