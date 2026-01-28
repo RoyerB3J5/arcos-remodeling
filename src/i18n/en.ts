@@ -153,9 +153,10 @@ export default {
         },
       },
     },
-    request:{
-      title:'Request Your Free Estimate in Minutes',
-      description:'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, call or text <a href="tel:+15052270276">(505) 227-0276</a> and we’ll help coordinate your project.'
+    request: {
+      title: 'Request Your Free Estimate in Minutes',
+      description:
+        'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, call or text <a href="tel:+15052270276">(505) 227-0276</a> and we’ll help coordinate your project.',
     },
     why: {
       title: 'Why Choose <br class="hidden sm:block"/> Arcos Remodeling',
