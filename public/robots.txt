@@ -1,0 +1,26 @@
+# Robots.txt para Arcos Remodeling
+# Permite que los buscadores rastreen todo el contenido
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+# Rutas específicas permitidas
+Allow: /en/
+Allow: /es/
+Allow: /services/
+Allow: /about-us/
+Allow: /book-appointment/
+Allow: /faq/
+Allow: /bio/
+Allow: /connect/
+Allow: /review/
+
+# Crawl delay para respetar el servidor
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://arcosremodelingservices.com/sitemap.xml

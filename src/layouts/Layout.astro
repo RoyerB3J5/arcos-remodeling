@@ -41,6 +41,12 @@ const { lang, t } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+    <!-- SEO Local para Albuquerque -->
+    <meta name="geo.region" content="US-NM" />
+    <meta name="geo.placename" content="Albuquerque" />
+    <meta name="geo.position" content="35.0844;-106.6504" />
+    <meta name="ICBM" content="35.0844, -106.6504" />
+
     <meta name="generator" content={Astro.generator} />
     <title>Arcos Remodeling - Quality home improvements you can trust</title>
     <meta
@@ -54,9 +60,10 @@ const { lang, t } = Astro.props;
     />
     <meta name="author" content="Arcos Remodeling" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://arcosremodeling.com/" />
+    <link rel="canonical" href="https://arcosremodelingservices.com/" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arcos Remodeling" />
     <meta
       property="og:title"
       content="Arcos Remodeling - Quality home improvements you can trust"
@@ -65,8 +72,20 @@ const { lang, t } = Astro.props;
       property="og:description"
       content="Arcos Remodeling provides top-quality home improvement services, ensuring your home looks its best."
     />
-    <meta property="og:url" content="https://arcosremodeling.com/" />
-    <meta property="og:image" content="/images/hero/fondo.png" />
+    <meta property="og:url" content="https://arcosremodelingservices.com/" />
+
+    <meta
+      property="og:image"
+      content="https://arcosremodelingservices.com/images/fondo.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://arcosremodelingservices.com/images/fondo.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Arcos Remodeling" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -79,7 +98,16 @@ const { lang, t } = Astro.props;
       name="twitter:description"
       content="Arcos Remodeling provides top-quality home improvement services, ensuring your home looks its best."
     />
-    <meta name="twitter:image" content="/images/hero/fondo.png" />
+    <meta
+      name="twitter:image"
+      content="https://arcosremodelingservices.com/images/fondo.png"
+    />
+
+    <!-- fallback -->
+    <link
+      rel="image_src"
+      href="https://arcosremodelingservices.com/images/fondo.png"
+    />
 
     <!-- JSON-LD Organization -->
     <script type="application/ld+json">
@@ -87,8 +115,8 @@ const { lang, t } = Astro.props;
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Arcos Remodeling",
-        "url": "https://arcosremodeling.com/",
-        "logo": "https://arcosremodeling.com/favicon.svg"
+        "url": "https://arcosremodelingservices.com/",
+        "logo": "https://arcosremodelingservices.com/favicon.svg"
       }
     </script>
   </head>
@@ -145,6 +173,20 @@ const { lang, t } = Astro.props;
 
       // Fallback garantizado para mostrar contenido
       setTimeout(showContent, 500);
+
+      // Registrar Service Worker para PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/worker.js')
+            .then((registration) => {
+              console.log('Service Worker registrado:', registration);
+            })
+            .catch((error) => {
+              console.warn('Error al registrar Service Worker:', error);
+            });
+        });
+      }
     </script>
   </body>
 </html>
@@ -155,7 +197,8 @@ const { lang, t } = Astro.props;
     const wrappers = Array.from(
       document.querySelectorAll('.form-container')
     ).filter((w) => w.querySelector('iframe[data-src]'));
-    const EMBED_SRC = 'https://link.arcosremodelingservices.com/js/form_embed.js';
+    const EMBED_SRC =
+      'https://link.arcosremodelingservices.com/js/form_embed.js';
     const FALLBACK_MS = 10000; // 10s fallback
 
     function ensureEmbedScript() {

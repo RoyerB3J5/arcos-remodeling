@@ -35,7 +35,7 @@ export default {
     buttons: [
       {
         label: 'Reservar!',
-        href: '#',
+        href: '/es/book-appointment',
         icon: 'arrow',
         background: 'bg-white',
       },
@@ -56,7 +56,7 @@ export default {
         {
           icon: 'arrow',
           label: 'Reservar Ya!',
-          href: '#',
+          href: '/es/book-appointment',
           color: 'bg-white',
         },
         {
@@ -203,7 +203,7 @@ export default {
       buttons: [
         {
           label: 'Reservar Ya!',
-          href: '#',
+          href: '/es/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },
@@ -300,7 +300,7 @@ export default {
       buttons: [
         {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },
@@ -329,7 +329,7 @@ export default {
         ],
         button: {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
         },
         image: 'hero-interior-painting',
       },
@@ -407,7 +407,7 @@ export default {
         buttons: [
           {
             label: 'Reservar!',
-            href: '#',
+            href: '/es/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -435,7 +435,7 @@ export default {
         ],
         button: {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
         },
         image: 'hero-exterior-painting',
       },
@@ -513,7 +513,7 @@ export default {
         buttons: [
           {
             label: 'Reservar!',
-            href: '#',
+            href: '/es/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -541,7 +541,7 @@ export default {
         ],
         button: {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
         },
         image: 'hero-drywall-repair',
       },
@@ -619,7 +619,7 @@ export default {
         buttons: [
           {
             label: 'Reservar!',
-            href: '#',
+            href: '/es/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -647,7 +647,7 @@ export default {
         ],
         button: {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
         },
         image: 'hero-drywall-texture',
       },
@@ -725,7 +725,7 @@ export default {
         buttons: [
           {
             label: 'Reservar!',
-            href: '#',
+            href: '/es/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -753,7 +753,7 @@ export default {
         ],
         button: {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
         },
         image: 'hero-additional',
       },
@@ -888,7 +888,7 @@ export default {
         buttons: [
           {
             label: 'Reservar!',
-            href: '#',
+            href: '/es/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -905,7 +905,7 @@ export default {
   'about-us': {
     hero: {
       title:
-        "<span class='text-secondary'>Creado con cuidado.</span> Definido por la calidad.",
+        "<span class='text-secondary'>Creado con cuidado.</span> <br/> Definido por la calidad.",
     },
     info: {
       title: 'Sobre Arcos Remodeling',
@@ -940,7 +940,7 @@ export default {
       buttons: [
         {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },
@@ -1015,7 +1015,7 @@ export default {
       buttons: [
         {
           label: 'Reservar!',
-          href: '#',
+          href: '/es/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },

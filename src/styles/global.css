@@ -69,15 +69,31 @@
   animation: shake 2s ease-in-out infinite;
 }
 
+/* Estados iniciales de los elementos de animación - ocultos sin la clase 'active' */
+.fade-down {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.fade-down-2 {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
 /* Por defecto (móvil y hasta lg): fadeUp */
 .fade-down.active {
   opacity: 1;
-  animation: fadeUp 1.2s ease-in-out forwards;
+  animation: fadeUp 1.2s ease-out forwards;
 }
 
 @keyframes fadeUp {
   from {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(100%);
   }
   to {
@@ -89,13 +105,13 @@
 /* En lg y arriba: fadeDown */
 @media (min-width: 1024px) {
   .fade-down.active {
-    animation: fadeDown 1.2s ease-in-out forwards;
+    animation: fadeDown 1.2s ease-out forwards;
   }
 }
 
 @keyframes fadeDown {
   from {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-100%);
   }
   to {
@@ -105,14 +121,14 @@
 }
 
 .fade-down-2.active {
-  opacity: 0.5;
-  animation: fadeUp2 1s ease-in-out forwards;
-  animation-delay: 1s;
+  opacity: 1;
+  animation: fadeUp2 1.2s ease-out forwards;
+  animation-delay: 0s;
 }
 
 @keyframes fadeUp2 {
   from {
-    opacity: 0.5;
+    opacity: 0;
     transform: translateY(-80%);
   }
   to {
@@ -124,14 +140,14 @@
 /* En lg y arriba: fadeDown2 */
 @media (min-width: 1024px) {
   .fade-down-2.active {
-    animation: fadeDown2 1s ease-in-out forwards;
-    animation-delay: 0.2s;
+    animation: fadeDown2 1.2s ease-out forwards;
+    animation-delay: 0s;
   }
 }
 
 @keyframes fadeDown2 {
   from {
-    opacity: 0.5;
+    opacity: 0;
     transform: translateY(-100%);
   }
   to {
@@ -143,12 +159,12 @@
 /* Por defecto (móvil y hasta lg): fadeDown */
 .fade-up.active {
   opacity: 1;
-  animation: fadeDown 1.2s ease-in-out forwards;
+  animation: fadeDown 1.2s ease-out forwards;
 }
 
 /* En lg y arriba: fadeUp */
 @media (min-width: 1024px) {
   .fade-up.active {
-    animation: fadeUp 1.2s ease-in-out forwards;
+    animation: fadeUp 1.2s ease-out forwards;
   }
 }

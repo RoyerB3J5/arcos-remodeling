@@ -39,7 +39,7 @@ export default {
     buttons: [
       {
         label: 'Book Now!',
-        href: '#',
+        href: '/en/book-appointment',
         icon: 'arrow',
         background: 'bg-white',
       },
@@ -60,7 +60,7 @@ export default {
         {
           icon: 'arrow',
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
           color: 'bg-white',
         },
         {
@@ -207,7 +207,7 @@ export default {
       buttons: [
         {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },
@@ -304,7 +304,7 @@ export default {
       buttons: [
         {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },
@@ -333,7 +333,7 @@ export default {
         ],
         button: {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
         },
         image: 'hero-interior-painting',
       },
@@ -411,7 +411,7 @@ export default {
         buttons: [
           {
             label: 'Book Now!',
-            href: '#',
+            href: '/en/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -439,7 +439,7 @@ export default {
         ],
         button: {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
         },
         image: 'hero-exterior-painting',
       },
@@ -517,7 +517,7 @@ export default {
         buttons: [
           {
             label: 'Book Now!',
-            href: '#',
+            href: '/en/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -545,7 +545,7 @@ export default {
         ],
         button: {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
         },
         image: 'hero-drywall-repair',
       },
@@ -623,7 +623,7 @@ export default {
         buttons: [
           {
             label: 'Book Now!',
-            href: '#',
+            href: '/en/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -651,7 +651,7 @@ export default {
         ],
         button: {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
         },
         image: 'hero-drywall-texture',
       },
@@ -729,7 +729,7 @@ export default {
         buttons: [
           {
             label: 'Book Now!',
-            href: '#',
+            href: '/en/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -757,7 +757,7 @@ export default {
         ],
         button: {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
         },
         image: 'hero-additional',
       },
@@ -811,7 +811,7 @@ export default {
             description:
               'Cleaning and maintenance services for residential and commercial properties.',
             title2: 'Services:',
-            services: ['IParking Lot Cleaning', 'Trash Bins Cleaning Services'],
+            services: ['Parking Lot Cleaning', 'Trash Bins Cleaning Services'],
             image: 'additional-4',
           },
           {
@@ -889,7 +889,7 @@ export default {
         buttons: [
           {
             label: 'Book Now!',
-            href: '#',
+            href: '/en/book-appointment',
             icon: 'arrow',
             color: 'bg-white',
           },
@@ -941,7 +941,7 @@ export default {
       buttons: [
         {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },
@@ -1016,7 +1016,7 @@ export default {
       buttons: [
         {
           label: 'Book Now!',
-          href: '#',
+          href: '/en/book-appointment',
           icon: 'arrow',
           color: 'bg-white',
         },

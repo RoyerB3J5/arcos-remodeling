@@ -24,7 +24,11 @@ const t = translations[lang];
     <div class="w-full flex flex-col justify-center items-center gap-14">
       <ServicesContent content={t.servicesPage.services} />
     </div>
-    <RequestContent content={t.main.request} />
+    <div
+      class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16"
+    >
+      <RequestContent content={t.main.request} />
+    </div>
     <Improve content={t.servicesPage.improve} />
   </section>
 </Layout>

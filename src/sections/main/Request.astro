@@ -1,5 +1,4 @@
 ---
-import FormService from '../../components/FormService.astro';
 import RequestContent from './RequestContent.astro';
 
 type Translations = typeof import('../../i18n/es').default;
@@ -8,10 +7,14 @@ interface Props {
   content: RequestContent;
 }
 const { content } = Astro.props as Props;
+
+const pathname = Astro.url.pathname;
+const isAboutUsPage = pathname.includes('/about-us');
+const paddingClass = isAboutUsPage ? '' : 'pt-14 lg:pt-30';
 ---
 
 <section
-  class="w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex justify-center items-center gap-10 md:gap-16 pt-14 lg:pt-30 flex-col md:flex-row"
+  class={`w-full max-w-screen xl:max-w-7xl px-5 xl:px-0 flex justify-center items-center gap-10 md:gap-16 ${paddingClass} flex-col md:flex-row`}
 >
   <RequestContent content={content} />
 </section>
