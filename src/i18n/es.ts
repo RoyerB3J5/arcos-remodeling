@@ -41,7 +41,7 @@ export default {
       },
       {
         label: 'Llamar!',
-        href: 'tel:+15052270276',
+        href: 'tel:+15052079968',
         icon: 'phone',
         background: 'bg-primary',
       },
@@ -62,7 +62,7 @@ export default {
         {
           icon: 'phone',
           label: 'Llamar!',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           color: 'bg-secondary',
         },
       ],
@@ -135,16 +135,16 @@ export default {
       ],
       service5: {
         image: 'service-5',
-        title: 'Additional Services',
+        title: 'Servicios adicionales',
         items: [
-          'Painting & Wall Services',
-          'Carpentry & Installations',
-          'Outdoor & Property Services',
-          'Cleaning & Maintenance',
-          'Light Home Repairs',
+          'Servicios de pintura y paredes',
+          'Carpintería e instalaciones',
+          'Servicios exteriores y de propiedad',
+          'Limpieza y mantenimiento',
+          'Reparaciones ligeras en el hogar',
         ],
         button: {
-          label: 'View Service',
+          label: 'Ver servicio',
           href: 'additional-services',
         },
       },
@@ -152,7 +152,7 @@ export default {
     request: {
       title: 'Solicita tu presupuesto gratis en minutos',
       description:
-        'Gracias por elegir Arcos Remodeling Home Improvement. Si estos horarios no funcionan, llama o envía mensaje al <a href="tel:+15052270276">(505) 227-0276</a> y te ayudaremos a coordinar tu proyecto.',
+        'Gracias por elegir Arcos Remodeling Home Improvement. Si estos horarios no funcionan, llama o envía mensaje al <a href="tel:+15052079968">+1 (505) 207-9968</a> y te ayudaremos a coordinar tu proyecto.',
     },
     why: {
       title: 'Por qué elegir a <br class="hidden sm:block"/> Arcos Remodeling',
@@ -209,7 +209,7 @@ export default {
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -299,14 +299,14 @@ export default {
         'Elige el servicio adecuado para tu proyecto y programa trabajo profesional de pintura o drywall con Arcos Remodeling. Acabados limpios, atención al detalle y resultados confiables en Nuevo México.',
       buttons: [
         {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
           icon: 'arrow',
           color: 'bg-white',
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -328,7 +328,7 @@ export default {
           'Respeto por tu hogar y horarios',
         ],
         button: {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
         },
         image: 'hero-interior-painting',
@@ -406,14 +406,14 @@ export default {
           'Programa tu proyecto de pintura interior con Arcos Remodeling y disfruta de acabados limpios, muros suaves y mano de obra confiable adaptada a tu hogar en Nuevo México.',
         buttons: [
           {
-            label: 'Reservar Ya!',
+            label: 'Reservar!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -434,7 +434,7 @@ export default {
           'Respeto por tu propiedad y horario',
         ],
         button: {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
         },
         image: 'hero-exterior-painting',
@@ -512,14 +512,14 @@ export default {
           'Programa tu proyecto de pintura exterior con Arcos Remodeling y disfruta de recubrimientos duraderos, mejor apariencia y mano de obra confiable en Nuevo México.',
         buttons: [
           {
-            label: 'Reservar Ya!',
+            label: 'Reservar!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -540,7 +540,7 @@ export default {
           'Servicio confiable en el que puedes confiar',
         ],
         button: {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
         },
         image: 'hero-drywall-repair',
@@ -618,14 +618,14 @@ export default {
           'Programa el servicio de reparación de drywall con Arcos Remodeling y disfruta de muros lisos y bien terminados con mano de obra profesional.',
         buttons: [
           {
-            label: 'Reservar Ya!',
+            label: 'Reservar!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -646,7 +646,7 @@ export default {
           'Servicio confiable y responsable',
         ],
         button: {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
         },
         image: 'hero-drywall-texture',
@@ -724,14 +724,14 @@ export default {
           'Programa el servicio de texturizado con Arcos Remodeling y consigue texturas limpias y consistentes que se integren con tus muros y techos.',
         buttons: [
           {
-            label: 'Reservar Ya!',
+            label: 'Reservar!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -752,7 +752,7 @@ export default {
           'Servicio confiable en el que puedes confiar',
         ],
         button: {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
         },
         image: 'hero-additional',
@@ -887,14 +887,14 @@ export default {
           'Programa una evaluación gratuita con Arcos Remodeling y te ayudaremos a encontrar la mejor solución para tu proyecto de mejora o mantenimiento.',
         buttons: [
           {
-            label: 'Reservar Ya!',
+            label: 'Reservar!',
             href: '#',
             icon: 'arrow',
             color: 'bg-white',
           },
           {
             label: 'Llamar Ya',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -939,14 +939,14 @@ export default {
         'Nuestra experiencia se refleja en la calidad del trabajo y la satisfacción de nuestros clientes. Cada proyecto se respalda con estándares profesionales y atención al detalle.',
       buttons: [
         {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
           icon: 'arrow',
           color: 'bg-white',
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1014,14 +1014,14 @@ export default {
         'Si necesitas más información o quieres hablar sobre tu proyecto, estamos aquí para ayudarte.',
       buttons: [
         {
-          label: 'Reservar Ya!',
+          label: 'Reservar!',
           href: '#',
           icon: 'arrow',
           color: 'bg-white',
         },
         {
           label: 'Llamar Ya',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1061,7 +1061,7 @@ export default {
       items: [
         {
           icon: 'map-1',
-          text: 'Sirviendo a Nuevo México',
+          text: 'Sirviendo en Nuevo México',
           href: '#',
         },
         {
@@ -1071,8 +1071,8 @@ export default {
         },
         {
           icon: 'phone-1',
-          text: '+1 (505) 227-0276',
-          href: 'tel:+15052270276',
+          text: '+1 (505) 207-9968',
+          href: 'tel:+15052079968',
         },
       ],
     },

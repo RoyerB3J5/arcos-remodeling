@@ -45,7 +45,7 @@ export default {
       },
       {
         label: 'Call Now',
-        href: 'tel:+15052270276',
+        href: 'tel:+15052079968',
         icon: 'phone',
         background: 'bg-primary',
       },
@@ -66,7 +66,7 @@ export default {
         {
           icon: 'phone',
           label: 'Call Now',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           color: 'bg-secondary',
         },
       ],
@@ -156,7 +156,7 @@ export default {
     request: {
       title: 'Request Your Free Estimate in Minutes',
       description:
-        'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, call or text <a href="tel:+15052270276">(505) 227-0276</a> and we’ll help coordinate your project.',
+        'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, call or text <a href="tel:+15052079968">+1 (505) 207-9968</a> and we’ll help coordinate your project.',
     },
     why: {
       title: 'Why Choose <br class="hidden sm:block"/> Arcos Remodeling',
@@ -213,7 +213,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -234,7 +234,7 @@ export default {
   book: {
     title: 'Request Your Free <br/> Estimate in Minutes',
     description:
-      'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, <br class="hidden sm:block"/> call or text <a href="tel:+15052270276">+1 (505) 227-0276</a> and we’ll help coordinate your project.',
+      'Thank you for choosing Arcos Remodeling Home Improvement. If these times don’t work, <br class="hidden sm:block"/> call or text <a href="tel:+15052079968">+1 (505) 207-9968</a> and we’ll help coordinate your project.',
   },
   servicesPage: {
     services: {
@@ -310,7 +310,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -417,7 +417,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -523,7 +523,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -629,7 +629,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -735,7 +735,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -895,7 +895,7 @@ export default {
           },
           {
             label: 'Call Now',
-            href: 'tel:+15052270276',
+            href: 'tel:+15052079968',
             icon: 'phone',
             color: 'bg-secondary',
           },
@@ -947,7 +947,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1022,7 +1022,7 @@ export default {
         },
         {
           label: 'Call Now',
-          href: 'tel:+15052270276',
+          href: 'tel:+15052079968',
           icon: 'phone',
           color: 'bg-secondary',
         },
@@ -1076,8 +1076,8 @@ export default {
         },
         {
           icon: 'phone-1',
-          text: '+1 (505) 227-0276',
-          href: 'tel:+15052270276',
+          text: '+1 (505) 207-9968',
+          href: 'tel:+15052079968',
         },
       ],
     },
