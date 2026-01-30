@@ -20,13 +20,13 @@ const { content } = Astro.props as Props;
     >
       <div class="flex flex-col justify-center items-start gap-4 text-white">
         <p
-          class="text-[16px] font-normal uppercase tracking-[2px] leading-[120%]"
+          class="text-[16px] md:text-[24px] font-normal uppercase tracking-[2px] leading-[120%]"
         >
           {content.description}
         </p>
         <h1
           set:html={content.title}
-          class="text-[32px] font-extrabold leading-[125%] font-title"
+          class="text-[32px] md:text-[48px] font-extrabold leading-[125%] md:leading-[117%] font-title"
         />
       </div>
       <div class="flex justify-start items-center gap-4">
@@ -60,7 +60,7 @@ const { content } = Astro.props as Props;
     class="w-full max-w-screen md:max-w-7xl sm:flex justify-start items-center px-5 xl:px-0 absolute hidden z-20 fade-down-2 active"
   >
     <div
-      class="flex flex-col justify-center items-start gap-8 xl:gap-16 max-w-1/2 translate-y-8 lg:translate-y-0"
+      class="flex flex-col justify-center items-start gap-8 xl:gap-16 max-w-1/2 translate-y-8 lg:translate-y-6"
     >
       <div class="flex flex-col justify-center items-start gap-8 text-white">
         <p
@@ -70,7 +70,7 @@ const { content } = Astro.props as Props;
         </p>
         <h1
           set:html={content.title}
-          class="text-[24px] md:text-[36px] lg:text-[48px] font-extrabold leading-[116%] font-title"
+          class="text-[24px] md:text-[36px] lg:text-[48px] 2xl:text-[54px] font-extrabold leading-[116%] font-title"
         />
       </div>
       <div class="flex justify-start items-center gap-4">

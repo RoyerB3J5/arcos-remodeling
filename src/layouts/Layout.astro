@@ -37,9 +37,10 @@ const { lang, t } = Astro.props;
     <!-- Preconnect para widget de chat - optimización de terceros -->
     <link rel="preconnect" href="https://widgets.leadconnectorhq.com" />
     <link rel="dns-prefetch" href="https://widgets.leadconnectorhq.com" />
+
     <!-- Icons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- SEO Local para Albuquerque -->
     <meta name="geo.region" content="US-NM" />
@@ -114,7 +115,7 @@ const { lang, t } = Astro.props;
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Arcos Remodeling",
+        "name": "Arcos Remodeling Service",
         "url": "https://arcosremodelingservices.com/",
         "logo": "https://arcosremodelingservices.com/favicon.svg"
       }
@@ -173,20 +174,6 @@ const { lang, t } = Astro.props;
 
       // Fallback garantizado para mostrar contenido
       setTimeout(showContent, 500);
-
-      // Registrar Service Worker para PWA
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('/worker.js')
-            .then((registration) => {
-              console.log('Service Worker registrado:', registration);
-            })
-            .catch((error) => {
-              console.warn('Error al registrar Service Worker:', error);
-            });
-        });
-      }
     </script>
   </body>
 </html>
